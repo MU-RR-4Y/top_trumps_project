@@ -3,18 +3,7 @@ db.dropDatabase();
 	
 db.dinosaurs.insertMany([	
 
-{	
-	background_image: "*.jpg",
-	category1: "name",
-	category2: "eating_habbits",
-	category3: "description",
-	field1: "height",
-	field2: "weight",
-	field3: "length",
-	field4: "danger_rating",
-	field5: "intelligence",
-	field6: "age",
-},
+
 {	
 	image: "*.jpg",
 	category1: "Pachycephalosaurus",
