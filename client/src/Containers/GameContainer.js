@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import PlayerCard from "../Components/PlayerCard";
 import ComputerCard from "../Components/ComputerCard";
 import { getDinosaurs } from "../Services/GameService";
+import "./GameContainer.css";
 
 
 const GameContainer = () => {
@@ -37,8 +38,10 @@ const GameContainer = () => {
     return (
         <>
             <p> Game Container! </p>
-            <PlayerCard player={player}/>
-            <ComputerCard cpu={cpu}/>
+            <div className="cards-display">
+                <PlayerCard player={player}/>
+                <ComputerCard cpu={cpu}/>
+            </div>
         </>
     );
      
