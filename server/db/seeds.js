@@ -16,7 +16,7 @@ db.dinosaurs.insertMany([
 	field6: "age",
 },
 {	
-	image: "*.jpg",
+	image: "Pachycephalosaurus.jpg",
 	category1: "Pachycephalosaurus",
 	category2: "Herbivore",
 	category3: "Pachycephalosaurus is famous for having a large, bony dome atop its skull, up to 25 cm (10 in) thick, which safely cushioned its tiny brain.",
@@ -28,7 +28,7 @@ db.dinosaurs.insertMany([
 	field6: 76,
 },	
 {	
-	image: "*.jpg",
+	image: "TRex.jpg",
 	category1: "Tyrannosaurus Rex",
 	category2: "Carnivore",
 	category3: "Tyrannosaurus rex was one of the most ferocious predators to ever walk the Earth. With a massive body, sharp teeth, and jaws so powerful they could crush a car.",
@@ -40,7 +40,7 @@ db.dinosaurs.insertMany([
 	field6: 67,
 },	
 {	
-	image: "*.jpg",
+	image: "Barosaurus.jpg",
 	category1: "Barosaurus",
 	category2: "Herbivore",
 	category3: "Barosaurus was a giant, long-tailed, long-necked, plant-eating sauropod dinosaur closely related to the more familiar Diplodocus.",
@@ -52,7 +52,7 @@ db.dinosaurs.insertMany([
 	field6: 156,
 },	
 {	
-	image: "*.jpg",
+	image: "Heterodontosaurus.jpg",
 	category1: "Heterodontosaurus",
 	category2: "Herbivore",
 	category3: "Heterodontosaurus is a genus of small omnivorous dinosaur with prominent canine teeth which lived in the early Jurassic of South Africa.",
@@ -64,7 +64,7 @@ db.dinosaurs.insertMany([
 	field6: 208,
 },	
 {	
-	image: "*.jpg",
+	image: "Suchomimus.jpg",
 	category1: "Suchomimus",
 	category2: "Carnivore",
 	category3: "",
@@ -76,7 +76,7 @@ db.dinosaurs.insertMany([
 	field6: 100,
 },	
 {	
-	image: "*.jpg",
+	image: "Pachyrhinosaurus.jpg",
 	category1: "Pachyrhinosaurus",
 	category2: "Herbivore",
 	category3: "",
@@ -88,7 +88,7 @@ db.dinosaurs.insertMany([
 	field6: 70,
 },	
 {	
-	image: "*.jpg",
+	image: "Compsognathus.jpg",
 	category1: "Compsognathus",
 	category2: "Carnivore",
 	category3: "",
@@ -100,7 +100,7 @@ db.dinosaurs.insertMany([
 	field6: 145,
 },	
 {	
-	image: "*.jpg",
+	image: "Iguanodon.jpg",
 	category1: "Iguanodon",
 	category2: "Herbivore",
 	category3: "",
@@ -112,7 +112,7 @@ db.dinosaurs.insertMany([
 	field6: 135,
 },	
 {	
-	image: "*.jpg",
+	image: "Pentaceratops.jpg",
 	category1: "Pentaceratops",
 	category2: "Herbivore",
 	category3: "",
@@ -124,7 +124,7 @@ db.dinosaurs.insertMany([
 	field6: 75,
 },	
 {	
-	image: "*.jpg",
+	image: "Coelophysis.jpg",
 	category1: "Coelophysis",
 	category2: "Carnivore",
 	category3: "",
@@ -136,7 +136,7 @@ db.dinosaurs.insertMany([
 	field6: 225,
 },	
 {	
-	image: "*.jpg",
+	image: "Velociraptor.jpg",
 	category1: "Velociraptor",
 	category2: "Carnivore",
 	category3: "",
@@ -148,7 +148,7 @@ db.dinosaurs.insertMany([
 	field6: 85,
 },	
 {	
-	image: "*.jpg",
+	image: "Centrosaurus.jpg",
 	category1: "Centrosaurus",
 	category2: "Herbivore",
 	category3: "",
@@ -160,7 +160,7 @@ db.dinosaurs.insertMany([
 	field6: 76,
 },	
 {	
-	image: "*.jpg",
+	image: "Megalosaurus.jpg",
 	category1: "Megalosaurus",
 	category2: "Carnivore",
 	category3: "",
@@ -172,7 +172,7 @@ db.dinosaurs.insertMany([
 	field6: 175,
 },	
 {	
-	image: "*.jpg",
+	image: "Protoceratops.jpg",
 	category1: "Protoceratops",
 	category2: "Herbivore",
 	category3: "",
@@ -184,7 +184,7 @@ db.dinosaurs.insertMany([
 	field6: 72,
 },	
 {	
-	image: "*.jpg",
+	image: "Giganotosaurus.jpg",
 	category1: "Giganotosaurus",
 	category2: "Carnivore",
 	category3: "",
@@ -196,7 +196,7 @@ db.dinosaurs.insertMany([
 	field6: 100,
 },	
 {	
-	image: "*.jpg",
+	image: "Brachiosaurus.jpg",
 	category1: "Brachiosaurus",
 	category2: "Herbivore",
 	category3: "",
@@ -208,7 +208,7 @@ db.dinosaurs.insertMany([
 	field6: 156,
 },	
 {	
-	image: "*.jpg",
+	image: "Herrerasaurus.jpg",
 	category1: "Herrerasaurus",
 	category2: "Carnivore",
 	category3: "",
@@ -220,7 +220,7 @@ db.dinosaurs.insertMany([
 	field6: 230,
 },	
 {	
-	image: "*.jpg",
+	image: "Gallimimus.jpg",
 	category1: "Gallimimus",
 	category2: "Omnivore",
 	category3: "",
@@ -244,7 +244,7 @@ db.dinosaurs.insertMany([
 	field6: 72,
 },	
 {	
-	image: "*.jpg",
+	image: "Corythosaurus.jpg",
 	category1: "Corythosaurus",
 	category2: "Herbivore",
 	category3: "",
@@ -256,7 +256,7 @@ db.dinosaurs.insertMany([
 	field6: 80,
 },	
 {	
-	image: "*.jpg",
+	image: "Maiasaura.jpg",
 	category1: "Maiasaura",
 	category2: "Herbivore",
 	category3: "",
@@ -268,7 +268,7 @@ db.dinosaurs.insertMany([
 	field6: 80,
 },	
 {	
-	image: "*.jpg",
+	image: "Dimorphodon.jpg",
 	category1: "Dimorphodon",
 	category2: "Carnivore",
 	category3: "",
@@ -280,7 +280,7 @@ db.dinosaurs.insertMany([
 	field6: 200,
 },	
 {	
-	image: "*.jpg",
+	image: "Stegosaurus.jpg",
 	category1: "Stegosaurus",
 	category2: "Herbivore",
 	category3: "",
@@ -292,7 +292,7 @@ db.dinosaurs.insertMany([
 	field6: 76,
 },	
 {	
-	image: "*.jpg",
+	image: "Stenonychosaurus.jpg",
 	category1: "Stenonychosaurus",
 	category2: "Carnivore",
 	category3: "",
@@ -304,7 +304,7 @@ db.dinosaurs.insertMany([
 	field6: 76,
 },	
 {	
-	image: "*.jpg",
+	image: "Hypsilophodon.jpg",
 	category1: "Hypsilophodon",
 	category2: "Herbivore",
 	category3: "",
@@ -316,7 +316,7 @@ db.dinosaurs.insertMany([
 	field6: 125,
 },	
 {	
-	image: "*.jpg",
+	image: "Camarasaurus.jpg",
 	category1: "Camarasaurus",
 	category2: "Herbivore",
 	category3: "",
@@ -328,7 +328,7 @@ db.dinosaurs.insertMany([
 	field6: 150,
 },	
 {	
-	image: "*.jpg",
+	image: "Styracosaurus.jpg",
 	category1: "Styracosaurus",
 	category2: "Herbivore",
 	category3: "",
@@ -340,7 +340,7 @@ db.dinosaurs.insertMany([
 	field6: 77,
 },	
 {	
-	image: "*.jpg",
+	image: "Euoplocephalus.jpg",
 	category1: "Euoplocephalus",
 	category2: "Herbivore",
 	category3: "",
@@ -352,7 +352,7 @@ db.dinosaurs.insertMany([
 	field6: 76,
 },	
 {	
-	image: "*.jpg",
+	image: "Archaeopteryx.jpg",
 	category1: "Archaeopteryx",
 	category2: "Omnivore",
 	category3: "",
@@ -364,7 +364,7 @@ db.dinosaurs.insertMany([
 	field6: 150,
 },	
 {	
-	image: "*.jpg",
+	image: "Oviraptor.jpg",
 	category1: "Oviraptor",
 	category2: "Carnivore",
 	category3: "",
