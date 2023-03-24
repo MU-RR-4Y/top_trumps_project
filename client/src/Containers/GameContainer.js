@@ -22,10 +22,7 @@ const GameContainer = () => {
     },[]);
 
 
-    
-
-
-    return (
+      return (
         <>
         <p> Game Container! </p>
         <PlayerCard/>
