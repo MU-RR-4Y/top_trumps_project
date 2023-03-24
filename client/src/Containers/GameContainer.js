@@ -5,11 +5,13 @@ import { getDinosaurs } from "../Services/GameService";
 
 
 const GameContainer = () => {
-
+    
     const [player,SetPlayer] = useState([]);
     const [cpu,SetCPU] = useState([]);
     const [middle,SetMiddle] = useState([]);
-
+    
+    
+    
     const shuffle = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -17,7 +19,7 @@ const GameContainer = () => {
         }
         return cards;
     };
-
+    
     useEffect(() => {
         getDinosaurs()
         .then((data) => {
@@ -27,9 +29,10 @@ const GameContainer = () => {
             SetPlayer(playerHand)
             SetCPU(cpuHand)
         })
-
+        
     },[]);
-
+    
+    if (!player.length || !cpu.length) return null;
 
     return (
         <>
@@ -38,6 +41,7 @@ const GameContainer = () => {
             <ComputerCard cpu={cpu}/>
         </>
     );
+     
 };
 
 export default GameContainer; 

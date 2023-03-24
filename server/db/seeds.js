@@ -3,7 +3,7 @@ db.dropDatabase();
 
 db.dinosaurs.insertMany([
     {
-        image: "*.jpg",
+        image: "Pachycephalosaurus.jpg",
         name: "Pachycephalosaurus",
         diet: "Herbivore",
         description: "Pachycephalosaurus is famous for having a large, bony dome atop its skull, up to 25 cm (10 in) thick, which safely cushioned its tiny brain.",
@@ -15,7 +15,7 @@ db.dinosaurs.insertMany([
         age: 76,
     },
     {
-        image: "*.jpg",
+        image: "Trex.jpg",
         name: "Tyrannosaurus Rex",
         diet: "Carnivore",
         description: "Tyrannosaurus rex was one of the most ferocious predators to ever walk the Earth. With a massive body, sharp teeth, and jaws so powerful they could crush a car.",
@@ -27,7 +27,7 @@ db.dinosaurs.insertMany([
         age: 67,
     },
     {
-        image: "*.jpg",
+        image: "Barosaurus.jpg",
         name: "Barosaurus",
         diet: "Herbivore",
         description: "Barosaurus was a giant, long-tailed, long-necked, plant-eating sauropod dinosaur closely related to the more familiar Diplodocus.",
@@ -39,7 +39,7 @@ db.dinosaurs.insertMany([
         age: 156,
     },
     {
-        image: "*.jpg",
+        image: "Heterodontosaurus.jpg",
         name: "Heterodontosaurus",
         diet: "Herbivore",
         description: "Heterodontosaurus is a genus of small omnivorous dinosaur with prominent canine teeth which lived in the early Jurassic of South Africa.",
@@ -51,10 +51,10 @@ db.dinosaurs.insertMany([
         age: 208,
     },
     {
-        image: "*.jpg",
+        image: "Suchomimus.jpg",
         name: "Suchomimus",
         diet: "Carnivore",
-        description: "",
+        description: "Suchomimus had a two-foot-high sail on its lower back. This dinosaur had a very long snout [1.2m long] and huge, foot-long thumb claws - adaptations to catch fish.",
         height: 13.1,
         weight: 11023,
         length: 39.3,
@@ -63,10 +63,10 @@ db.dinosaurs.insertMany([
         age: 100,
     },
     {
-        image: "*.jpg",
+        image: "Pachyrhinosaurus.jpg",
         name: "Pachyrhinosaurus",
         diet: "Herbivore",
-        description: "",
+        description: "Pachyrhinosaurus was a large, plant-eating dinosaur that had a bony, spiked neck frill, four short legs, and a short tail. Pachyrhinosaurus may or may not have had a snout horn - it did have a large bony bump on its nose.",
         height: 9.8,
         weight: 8000,
         length: 23,
@@ -75,10 +75,10 @@ db.dinosaurs.insertMany([
         age: 70,
     },
     {
-        image: "*.jpg",
+        image: "Compsognathus.jpg",
         name: "Compsognathus",
         diet: "Carnivore",
-        description: "",
+        description: "Compsognathus was a bird-like dinosaur that walked on two long, thin legs; it had three-toed feet. A long tail acted as a counterbalance and for stability during fast turns. It had short arms with two clawed fingers on each hand.",
         height: 2.3,
         weight: 6.6,
         length: 4.6,
@@ -87,10 +87,10 @@ db.dinosaurs.insertMany([
         age: 145,
     },
     {
-        image: "*.jpg",
+        image: "Iguanodon.jpg",
         name: "Iguanodon",
         diet: "Herbivore",
-        description: "",
+        description: "Iguanodon was a plant-eating dinosaur that had a conical spike on each thumb. It was probably a herding animal, as evidenced by bonebed discoveries in Belgium. In these bonebeds, dozens of Iguanodon fossils were found together, suggesting that they congregated during their lives.",
         height: 16.4,
         weight: 9920,
         length: 32.8,
@@ -99,10 +99,10 @@ db.dinosaurs.insertMany([
         age: 135,
     },
     {
-        image: "*.jpg",
+        image: "Pentaceratops.jpg",
         name: "Pentaceratops",
         diet: "Herbivore",
-        description: "",
+        description: "Pentaceratops was a rhinoceros-like plant-eating dinosaur. It walked on four sturdy legs and had three horns on its face along with a large bony plate projecting from the back of its skull (a frill). ",
         height: 9.8,
         weight: 17636,
         length: 26.2,
@@ -111,10 +111,10 @@ db.dinosaurs.insertMany([
         age: 75,
     },
     {
-        image: "*.jpg",
+        image: "Coelophysis.jpg",
         name: "Coelophysis",
         diet: "Carnivore",
-        description: "",
+        description: "Coelophysis was a small, lightly-built dinosaur that walked on two long legs. This predator was about 2.8m long. It had light, hollow bones, a long, pointed head with dozens of small, serrated teeth, three clawed fingers on its hands, and a long neck.",
         height: 6.6,
         weight: 59.5,
         length: 9.8,
@@ -123,7 +123,7 @@ db.dinosaurs.insertMany([
         age: 225,
     },
     {
-        image: "*.jpg",
+        image: "Velociraptor.jpg",
         name: "Velociraptor",
         diet: "Carnivore",
         description: "",
@@ -135,7 +135,7 @@ db.dinosaurs.insertMany([
         age: 85,
     },
     {
-        image: "*.jpg",
+        image: "Centrosaurus.jpg",
         name: "Centrosaurus",
         diet: "Herbivore",
         description: "",
@@ -147,7 +147,7 @@ db.dinosaurs.insertMany([
         age: 76,
     },
     {
-        image: "*.jpg",
+        image: "Megalosaurus.jpg",
         name: "Megalosaurus",
         diet: "Carnivore",
         description: "",
@@ -159,7 +159,7 @@ db.dinosaurs.insertMany([
         age: 175,
     },
     {
-        image: "*.jpg",
+        image: "Protoceratops.jpg",
         name: "Protoceratops",
         diet: "Herbivore",
         description: "",
@@ -171,7 +171,7 @@ db.dinosaurs.insertMany([
         age: 72,
     },
     {
-        image: "*.jpg",
+        image: "Giganotosaurus.jpg",
         name: "Giganotosaurus",
         diet: "Carnivore",
         description: "",
@@ -183,7 +183,7 @@ db.dinosaurs.insertMany([
         age: 100,
     },
     {
-        image: "*.jpg",
+        image: "Brachiosaurus.jpg",
         name: "Brachiosaurus",
         diet: "Herbivore",
         description: "",
@@ -195,7 +195,7 @@ db.dinosaurs.insertMany([
         age: 156,
     },
     {
-        image: "*.jpg",
+        image: "Herrerasaurus.jpg",
         name: "Herrerasaurus",
         diet: "Carnivore",
         description: "",
@@ -207,7 +207,7 @@ db.dinosaurs.insertMany([
         age: 230,
     },
     {
-        image: "*.jpg",
+        image: "Gallimimus.jpg",
         name: "Gallimimus",
         diet: "Omnivore",
         description: "",
@@ -219,7 +219,7 @@ db.dinosaurs.insertMany([
         age: 74,
     },
     {
-        image: "*.jpg",
+        image: "Triceratops.jpg",
         name: "Triceratops",
         diet: "Herbivore",
         description: "",
@@ -231,7 +231,7 @@ db.dinosaurs.insertMany([
         age: 72,
     },
     {
-        image: "*.jpg",
+        image: "Corythosaurus.jpg",
         name: "Corythosaurus",
         diet: "Herbivore",
         description: "",
@@ -243,7 +243,7 @@ db.dinosaurs.insertMany([
         age: 80,
     },
     {
-        image: "*.jpg",
+        image: "Maiasaura.jpg",
         name: "Maiasaura",
         diet: "Herbivore",
         description: "",
@@ -255,7 +255,7 @@ db.dinosaurs.insertMany([
         age: 80,
     },
     {
-        image: "*.jpg",
+        image: "Dimorphodon.jpg",
         name: "Dimorphodon",
         diet: "Carnivore",
         description: "",
@@ -267,7 +267,7 @@ db.dinosaurs.insertMany([
         age: 200,
     },
     {
-        image: "*.jpg",
+        image: "Stegosaurus.jpg",
         name: "Stegosaurus",
         diet: "Herbivore",
         description: "",
@@ -279,7 +279,7 @@ db.dinosaurs.insertMany([
         age: 76,
     },
     {
-        image: "*.jpg",
+        image: "Stenonychosaurus.jpg",
         name: "Stenonychosaurus",
         diet: "Carnivore",
         description: "",
@@ -291,7 +291,7 @@ db.dinosaurs.insertMany([
         age: 76,
     },
     {
-        image: "*.jpg",
+        image: "Hypsilophodon.jpg",
         name: "Hypsilophodon",
         diet: "Herbivore",
         description: "",
@@ -303,10 +303,10 @@ db.dinosaurs.insertMany([
         age: 125,
     },
     {
-        image: "*.jpg",
+        image: "Camarasaurus.jpg",
         name: "Camarasaurus",
         diet: "Herbivore",
-        description: "",
+        description: "over 100 different specimens have been found by paleontologists",
         height: 29.5,
         weight: 4409,
         length: 59.1,
@@ -315,10 +315,10 @@ db.dinosaurs.insertMany([
         age: 150,
     },
     {
-        image: "*.jpg",
+        image: "Styracosaurus.jpg",
         name: "Styracosaurus",
         diet: "Herbivore",
-        description: "",
+        description: "had a very distinctive skull, with 7 to 9 horns",
         height: 6.6,
         weight: 6614,
         length: 16.4,
@@ -327,10 +327,10 @@ db.dinosaurs.insertMany([
         age: 77,
     },
     {
-        image: "*.jpg",
+        image: "Euoplocephalus.jpg",
         name: "Euoplocephalus",
         diet: "Herbivore",
-        description: "",
+        description: "roughly the size of a rhinoceros, it probably weighed a lot more thanks to its thick armour",
         height: 5.9,
         weight: 4409,
         length: 19.7,
@@ -339,10 +339,10 @@ db.dinosaurs.insertMany([
         age: 76,
     },
     {
-        image: "*.jpg",
+        image: "Archaeopteryx.jpg",
         name: "Archaeopteryx",
         diet: "Omnivore",
-        description: "",
+        description: "sometimes called the 'first bird' because the winged creature was the first to show an evolutionary link between birds and reptiles",
         height: 1,
         weight: 13.2,
         length: 1,
@@ -351,10 +351,10 @@ db.dinosaurs.insertMany([
         age: 150,
     },
     {
-        image: "*.jpg",
+        image: "Oviraptor.jpg",
         name: "Oviraptor",
         diet: "Carnivore",
-        description: "",
+        description: "its name translates to 'egg thief', though they were quite protective of their own eggs",
         height: 2.6,
         weight: 44,
         length: 5.9,
