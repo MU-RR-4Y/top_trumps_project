@@ -362,4 +362,5 @@ db.dinosaurs.insertMany([
         intelligence: 8,
         age: 70,
     },
+
 ]);	
