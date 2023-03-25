@@ -8,7 +8,9 @@
   }
   
   .card-image {
-    padding-top: 10px; 
+    border-radius: 20px;
+    padding-top: 10px;
+    background-image: radial-gradient(circle, white, white, white, green, black, black);
   }
   
   .card-border {
@@ -25,6 +27,7 @@
     font-size: 1.5em;
     font-weight: bold;
     margin: 0;
+    margin-top: 10px;
   }
   
   .dino-info {
@@ -47,12 +50,16 @@
     justify-content: space-evenly;
   }
 
+  .dino-age:hover {
+    border: solid white 2px;
+  }
+
   .dino-danger {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
-
+  
   button {
     background-color: black;
     color: white;
