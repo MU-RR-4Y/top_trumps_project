@@ -17,7 +17,9 @@ const ComputerCard = ({ cpu }) => {
                     <p className="dino-name">
                         {mapArray[0].name}{mapArray[0].diet == "Herbivore" ? " 🥬" : " 🥩"}
                     </p>
-                    <p className="dino-info">{mapArray[0].description}</p>
+                    <div className="dino-info">
+                        <p>{mapArray[0].description}</p>
+                    </div>
                     <div className="dino-stats">
                         <p className="dino-weight">Weight:  {mapArray[0].weight} lbs</p>
                         <p className="dino-age">Age:  {mapArray[0].age} million years</p>

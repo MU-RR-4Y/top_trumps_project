@@ -36,6 +36,9 @@
     margin: 0;
     height: 60px;
     padding: 10px 5px 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .dino-weight {
@@ -50,14 +53,14 @@
     justify-content: space-evenly;
   }
 
-  .dino-age:hover {
-    border: solid white 2px;
-  }
-
   .dino-danger {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .dino-danger:hover {
+    color: green;
   }
   
   button {
