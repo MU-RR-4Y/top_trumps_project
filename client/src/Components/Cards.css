@@ -42,30 +42,64 @@
   }
 
   .dino-weight {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    transition: color 0.3s, transform 1s;
+    padding: 2px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 0.1em solid black;
   }
-
+  
+  .dino-weight:hover {
+    cursor: pointer;
+    color: green;
+    animation-name: hoverAnimation;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    border: 0.1em solid;
+    border-radius: 10px;
+  }
+  
   .dino-age {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    transition: color 0.3s, transform 1s;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 0.1em solid black;
   }
-
+  
+  .dino-age:hover {
+    cursor: pointer;
+    color: green;
+    animation-name: hoverAnimation;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    border: 0.1em solid;
+    border-radius: 10px;
+  }
+  
   .dino-danger {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    transition: color 0.3s, transform 1s;
+    padding: 2px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 0.1em solid black;
   }
 
   .dino-danger:hover {
+    cursor: pointer;
     color: green;
+    animation-name: hoverAnimation;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    border: 0.1em solid;
+    border-radius: 10px;
   }
-  
-  button {
-    background-color: black;
-    color: white;
-    height: 50px;
-    width: 200px;
+
+  @keyframes hoverAnimation {
+    0% {color: white;}
+    33% {color: green;}
+    66% {color: white;}
+    100% {color: green;}
   }
