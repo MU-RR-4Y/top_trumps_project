@@ -23,8 +23,8 @@ const ComputerCard = ({ cpu }) => {
                         <p className="dino-height">Height:  {mapArray[0].height} ft</p>
                         <p className="dino-length">Length:  {mapArray[0].length} ft</p>
                         <p className="dino-age">Age:  {mapArray[0].age} million years</p>
-                        <p className="dino-intelligence">Intelligence:  {mapArray[0].intelligence}/10</p>
-                        <p className="dino-danger">Danger rating:  {mapArray[0].danger_rating}/10</p>
+                        <p className="dino-intelligence">Intelligence:  {mapArray[0].intelligence}</p>
+                        <p className="dino-danger">Danger rating:  {mapArray[0].danger_rating}</p>
                     </div>
                 </div>
             </div>

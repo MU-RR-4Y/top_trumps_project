@@ -112,21 +112,24 @@ const GameContainer = () => {
             </audio>
             <div className="cards-display">
                 <div className="player-card">
+                    <PlayerCard player={player} compareAttribute={compareAttribute}/>
                     <div className="player-name">
                         <p>Player</p>
                     </div>
-                    <PlayerCard player={player} compareAttribute={compareAttribute}/>
                     <div className="cards-remaining">
-                        <p>Player has {player.length} cards</p>
+                        <p>{player.length} cards remaining</p>
                     </div>
                 </div>
+                <div className="draw-pile">
+                    <p>Draw pile has {middle.length}</p>
+                </div>
                 <div className="cpu-card">
-                    <div className="player-name">
-                        <p>Player</p>
-                    </div>
                     <ComputerCard cpu={cpu}/>
+                    <div className="player-name">
+                        <p>Computer</p>
+                    </div>
                     <div className="cards-remaining">
-                        <p>Computer has {cpu.length} cards</p>
+                        <p>{cpu.length} cards remaining</p>
                     </div>
                 </div>
             </div>
