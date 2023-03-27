@@ -11,6 +11,7 @@ const GameContainer = () => {
     const [cpu,SetCPU] = useState([]);
     const [middle,SetMiddle] = useState([]);
     const [result,SetResult]= useState(null);
+    const [resultMessage,SetResultMessage]= useState('')
     
     
     
@@ -22,30 +23,56 @@ const GameContainer = () => {
         return cards;
     };
 
+    //remove index 0 from each hand ---- WORKS
+    const changeCards = ()=>{
+        const newPlayer =[...player]
+        newPlayer.splice(0,1)
+        SetPlayer(newPlayer)
+        const newCPU =[...cpu]
+        newCPU.splice(0,1)
+        SetCPU(newCPU)
+        return;
+    }
     
-    
+     // add exisiting index 0 cards to middle deck  ---- WORKS
+     const middleDeck =()=>{
+        const mid =[...middle]
+        mid.push(player[0])
+        mid.push(cpu[0])
+        SetMiddle(mid)
+       
+
+    }
     
     //Comparison function
     const compareAttribute =(attribute)=>{
         const key = (attribute)
         if (player[0][key] > cpu[0][key]){
             SetResult('player')
-            
         } else if(cpu[0][key] > player[0][key]){
             SetResult('cpu')
         } else{
             SetResult('draw')
         }
     };
+
+    
     
     //resolve game
     const resolveGame = (result)=>{
         if(result === 'player'){
-            console.log('player wins')
+            SetResultMessage('Player wins!!')
+            middleDeck()
+            changeCards()
         } else if (result === 'cpu'){
-            console.log('cpu wins')
+            SetResultMessage('CPU wins!!!')
+            middleDeck()
+            changeCards()
         } else if(result === 'draw'){
-            console.log('draw')
+            SetResultMessage('Draw')
+            middleDeck()
+            changeCards()
+
         }
         SetResult('')
     }
