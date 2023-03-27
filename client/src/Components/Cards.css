@@ -1,0 +1,106 @@
+.card-front {
+    width: 280px;
+    height: 440px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .card-image {
+    border-radius: 20px;
+    padding-top: 10px;
+    background-image: radial-gradient(circle, white, white, white, rgb(0, 175, 0), black, black);
+  }
+  
+  .card-border {
+    width: 300px;
+    height: 460px;
+    background-image: linear-gradient(to bottom right, green, rgb(194, 253, 68), green);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 10px #0000008d;
+  }
+  
+  .dino-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+  }
+  
+  .dino-info {
+    font-size: 0.75em;
+    font-style: italic;
+    margin: 0;
+    height: 60px;
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dino-weight {
+    transition: color 0.3s, transform 1s;
+    padding: 2px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 0.1em solid black;
+  }
+  
+  .dino-weight:hover {
+    cursor: pointer;
+    color: rgb(174, 255, 0);
+    animation-name: hoverAnimation;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    border: 0.1em solid;
+    border-radius: 10px;
+  }
+  
+  .dino-age {
+    transition: color 0.3s, transform 1s;
+    padding: 2px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 0.1em solid black;
+  }
+  
+  .dino-age:hover {
+    cursor: pointer;
+    color: rgb(174, 255, 0);
+    animation-name: hoverAnimation;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    border: 0.1em solid;
+    border-radius: 10px;
+  }
+  
+  .dino-danger {
+    transition: color 0.3s, transform 1s;
+    padding: 2px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 0.1em solid black;
+  }
+
+  .dino-danger:hover {
+    cursor: pointer;
+    color: rgb(174, 255, 0);
+    animation-name: hoverAnimation;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    border: 0.1em solid;
+    border-radius: 10px;
+  }
+
+  @keyframes hoverAnimation {
+    0% {color: white;}
+    33% {color: rgb(174, 255, 0);}
+    66% {color: white;}
+    100% {color: rgb(174, 255, 0);}
+  }

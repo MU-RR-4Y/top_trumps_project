@@ -15,7 +15,7 @@ db.dinosaurs.insertMany([
         age: 76,
     },
     {
-        image: "Trex.jpg",
+        image: "TRex.jpg",
         name: "Tyrannosaurus Rex",
         diet: "Carnivore",
         description: "Tyrannosaurus rex was one of the most ferocious predators to ever walk the Earth. With a massive body, sharp teeth, and jaws so powerful they could crush a car.",
