@@ -8,3 +8,17 @@
 .cards-display p {
 font-weight: bold;
 }
+
+.cards-remaining {
+    width: 300px;
+    height: 50px;
+    background-image: linear-gradient(to bottom right, green, rgb(194, 253, 68), green);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 10px #0000008d;
+}
+
+.player-name {
+    
+}
