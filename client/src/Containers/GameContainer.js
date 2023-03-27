@@ -23,29 +23,18 @@ const GameContainer = () => {
         return cards;
     };
 
-    //remove index 0 from each hand ---- WORKS
-    const changeCards = ()=>{
-        const newPlayer =[...player]
-        newPlayer.splice(0,1)
-        SetPlayer(newPlayer)
-        const newCPU =[...cpu]
-        newCPU.splice(0,1)
-        SetCPU(newCPU)
-        return;
-    }
-    
-    // add exisiting index 0 cards to middle deck  ---- WORKS
+        
+    // add exisiting index 0 cards to middle deck  
      const middleDeck =()=>{
         const mid =[...middle]
         mid.push(player[0])
         mid.push(cpu[0])
         SetMiddle(mid)
-       
-
     }
     
     //Comparison function
     const compareAttribute =(attribute)=>{
+        middleDeck()
         const key = (attribute)
         if (player[0][key] > cpu[0][key]){
             SetResult('player')
@@ -58,12 +47,25 @@ const GameContainer = () => {
 
     const playerWin =()=>{
         const newPlayer = [...player]
-        console.log(middle)
-        const playerWin =newPlayer.concat(middle)
-        console.log(playerWin)
+        const playerWin = newPlayer.concat(middle)
+        playerWin.shift()  // remove index [0] of playerhand
+        const newCPU = [...cpu]
+        newCPU.shift() // remove index [0] of cpuhand
         SetPlayer(playerWin)
-        // SetMiddle([])
+        SetCPU(newCPU)
+        SetMiddle([])
 
+    }
+
+    const cpuWin =()=>{
+        const newCPU = [...cpu]
+        const cpuWin = newCPU.concat(middle)
+        cpuWin.shift() // remove index [0] of cpuhand
+        const newPlayer= [...player]
+        newPlayer.shift() // remove index [0] of playerhand
+        SetPlayer(cpuWin)
+        SetCPU(newPlayer)
+        SetMiddle([])
     }
     
     
@@ -71,18 +73,12 @@ const GameContainer = () => {
     const resolveGame = (result)=>{
         if(result === 'player'){
             SetResultMessage('Player wins!!')
-            middleDeck()
             playerWin()
-            changeCards()
         } else if (result === 'cpu'){
             SetResultMessage('CPU wins!!!')
-            middleDeck()
-            changeCards()
+            cpuWin()
         } else if(result === 'draw'){
             SetResultMessage('Draw')
-            middleDeck()
-            changeCards()
-
         }
         SetResult('')
     }
