@@ -3,6 +3,7 @@ import PlayerCard from "../Components/PlayerCard";
 import ComputerCard from "../Components/ComputerCard";
 import { getDinosaurs } from "../Services/GameService";
 import "./GameContainer.css";
+import "./AudioControl.css";
 
 
 const GameContainer = () => {
@@ -102,9 +103,16 @@ const GameContainer = () => {
     
     if (!player.length || !cpu.length) return null;
 
+
+
     return (
         <>
-            <p> Game Container! </p>
+            <audio id="theme-audio"  controls controlsList="nodownload noplaybackrate">
+                <source src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} type="audio/mpeg"></source>
+            </audio>
+
+            
+            
             <div className="cards-display">
                 <PlayerCard player={player} compareAttribute={compareAttribute}/>
                 <ComputerCard cpu={cpu}/>
@@ -113,5 +121,6 @@ const GameContainer = () => {
     );
      
 };
+
 
 export default GameContainer; 
