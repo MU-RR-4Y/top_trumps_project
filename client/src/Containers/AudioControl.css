@@ -4,7 +4,6 @@ audio {
     border: 1px solid;
     border-radius: 25px;
     box-shadow: 10px 10px 10px #0000008d;
-
 }
 
 audio::-webkit-media-controls-panel {

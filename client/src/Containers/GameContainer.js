@@ -114,10 +114,14 @@ const GameContainer = () => {
             
             
             <div className="cards-display">
+                <div className="player-card">
                 <PlayerCard player={player} compareAttribute={compareAttribute}/>
                 <p>Player has {player.length} cards</p>
+                </div>
+                <div className="cpu-card">
                 <ComputerCard cpu={cpu}/>
                 <p>Computer has {cpu.length} cards</p>
+                </div>
             </div>
         </>
     );
