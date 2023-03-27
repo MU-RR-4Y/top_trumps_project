@@ -34,7 +34,7 @@ const GameContainer = () => {
         return;
     }
     
-     // add exisiting index 0 cards to middle deck  ---- WORKS
+    // add exisiting index 0 cards to middle deck  ---- WORKS
      const middleDeck =()=>{
         const mid =[...middle]
         mid.push(player[0])
@@ -56,6 +56,15 @@ const GameContainer = () => {
         }
     };
 
+    const playerWin =()=>{
+        const newPlayer = [...player]
+        console.log(middle)
+        const playerWin =newPlayer.concat(middle)
+        console.log(playerWin)
+        SetPlayer(playerWin)
+        // SetMiddle([])
+
+    }
     
     
     //resolve game
@@ -63,6 +72,7 @@ const GameContainer = () => {
         if(result === 'player'){
             SetResultMessage('Player wins!!')
             middleDeck()
+            playerWin()
             changeCards()
         } else if (result === 'cpu'){
             SetResultMessage('CPU wins!!!')
