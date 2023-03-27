@@ -21,7 +21,7 @@ const ComputerCard = ({ cpu }) => {
                         <p>{mapArray[0].description}</p>
                     </div>
                     <div className="dino-stats">
-                        <p className="dino-weight">Weight:  {mapArray[0].weight} lbs</p>
+                        <p className="dino-weight">Weight:  {mapArray[0].weight.toLocaleString()} lbs</p>
                         <p className="dino-height">Height:  {mapArray[0].height} ft</p>
                         <p className="dino-length">Length:  {mapArray[0].length} ft</p>
                         <p className="dino-age">Age:  {mapArray[0].age} million years</p>

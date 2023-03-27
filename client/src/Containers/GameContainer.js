@@ -38,6 +38,10 @@ const GameContainer = () => {
     return (
         <>
             <p> Game Container! </p>
+            <audio controls autoplay>
+                <source src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} type="audio/mpeg"></source>
+            </audio>
+            
             <div className="cards-display">
                 <PlayerCard player={player}/>
                 <ComputerCard cpu={cpu}/>
@@ -46,5 +50,6 @@ const GameContainer = () => {
     );
      
 };
+
 
 export default GameContainer; 
