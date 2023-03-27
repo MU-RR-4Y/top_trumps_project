@@ -110,14 +110,15 @@ const GameContainer = () => {
             <audio id="theme-audio"  controls controlsList="nodownload noplaybackrate">
                 <source src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} type="audio/mpeg"></source>
             </audio>
-
-            
-            
             <div className="cards-display">
+                <div className="player-card">
                 <PlayerCard player={player} compareAttribute={compareAttribute}/>
                 <p>Player has {player.length} cards</p>
+                </div>
+                <div className="cpu-card">
                 <ComputerCard cpu={cpu}/>
                 <p>Computer has {cpu.length} cards</p>
+                </div>
             </div>
         </>
     );

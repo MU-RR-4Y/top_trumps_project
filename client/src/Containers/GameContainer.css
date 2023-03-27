@@ -1,5 +1,10 @@
 .cards-display {
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.cards-display p {
+font-weight: bold;
 }
