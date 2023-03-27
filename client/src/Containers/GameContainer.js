@@ -10,6 +10,7 @@ const GameContainer = () => {
     const [player,SetPlayer] = useState([]);
     const [cpu,SetCPU] = useState([]);
     const [middle,SetMiddle] = useState([]);
+    const [result,SetResult]= useState('');
     
     
     
@@ -19,6 +20,25 @@ const GameContainer = () => {
           [cards[i], cards[j]] = [cards[j], cards[i]];
         }
         return cards;
+    };
+
+
+
+    //Comparison function
+
+    const compareAttribute =(attribute)=>{
+        const key = (attribute.toLowerCase())
+        if (player[0][key] > cpu[0][key]){
+            SetResult('player')
+            
+        } else if(cpu[0][key] > player[0][key]){
+            SetResult('cpu')
+            
+        } else{
+            SetResult('draw')
+            
+        }
+        
     };
     
     useEffect(() => {
@@ -39,7 +59,7 @@ const GameContainer = () => {
         <>
             <p> Game Container! </p>
             <div className="cards-display">
-                <PlayerCard player={player}/>
+                <PlayerCard player={player} compareAttribute={compareAttribute}/>
                 <ComputerCard cpu={cpu}/>
             </div>
         </>
