@@ -22,6 +22,7 @@ const PlayerCard = ({ player, compareAttribute }) => {
                         <p className="dino-name">
                             {selectedCard.name}{selectedCard.diet == "Herbivore" ? " 🥬" : " 🥩"}
                         </p>
+                    
                         <p className="dino-info">{selectedCard.description}</p>
                         <p className="dino-weight" id="weight" onClick={handleClick}>Weight:  {selectedCard.weight.toLocaleString()} lbs</p>
                         <p className="dino-height" id="height" onClick={handleClick}>Height:  {selectedCard.height} ft</p>
@@ -30,6 +31,7 @@ const PlayerCard = ({ player, compareAttribute }) => {
                         <p className="dino-intelligence" id="intelligence" onClick={handleClick}>Intelligence:  {selectedCard.intelligence}/10</p>
                         <p className="dino-danger" id="danger_rating" onClick={handleClick}>Danger rating:  {selectedCard.danger_rating}/10</p>
                     </div>
+
                 </div>
                 :
                 <>

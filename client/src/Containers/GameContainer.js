@@ -64,8 +64,8 @@ const GameContainer = () => {
         cpuWin.shift() // remove index [0] of cpuhand
         const newPlayer= [...player]
         newPlayer.shift() // remove index [0] of playerhand
-        SetPlayer(cpuWin)
-        SetCPU(newPlayer)
+        SetCPU(cpuWin)
+        SetPlayer(newPlayer)
         SetMiddle([])
     }
     
@@ -115,7 +115,9 @@ const GameContainer = () => {
             
             <div className="cards-display">
                 <PlayerCard player={player} compareAttribute={compareAttribute}/>
+                <p>Player has {player.length} cards</p>
                 <ComputerCard cpu={cpu}/>
+                <p>Computer has {cpu.length} cards</p>
             </div>
         </>
     );
