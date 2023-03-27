@@ -25,7 +25,7 @@ const PlayerCard = ({ player }) => {
                             {selectedCard.name}{selectedCard.diet == "Herbivore" ? " 🥬" : " 🥩"}
                         </p>
                         <p className="dino-info">{selectedCard.description}</p>
-                        <p className="dino-weight" id="weight" onClick={handleClick}>Weight:  {selectedCard.weight} lbs</p>
+                        <p className="dino-weight" id="weight" onClick={handleClick}>Weight:  {selectedCard.weight.toLocaleString()} lbs</p>
                         <p className="dino-height" id="height" onClick={handleClick}>Height:  {selectedCard.height} ft</p>
                         <p className="dino-length" id="length" onClick={handleClick}>Length:  {selectedCard.length} ft</p>
                         <p className="dino-age" id="age" onClick={handleClick}>Age:  {selectedCard.age} million years</p>
