@@ -7,12 +7,8 @@ const PlayerCard = ({ player, compareAttribute }) => {
     const length = player.length;
 
     const handleClick = (e) => {
-        alert("!");
         compareAttribute(e.target.id)
-        
     };
-
-    console.log(player[0]);
 
     return (
         <>
@@ -31,8 +27,8 @@ const PlayerCard = ({ player, compareAttribute }) => {
                         <p className="dino-height" id="height" onClick={handleClick}>Height:  {selectedCard.height} ft</p>
                         <p className="dino-length" id="length" onClick={handleClick}>Length:  {selectedCard.length} ft</p>
                         <p className="dino-age" id="age" onClick={handleClick}>Age:  {selectedCard.age} million years</p>
-                        <p className="dino-intelligence" id="intelligence" onClick={handleClick}>Intelligence:  {selectedCard.intelligence}</p>
-                        <p className="dino-danger" id="danger_rating" onClick={handleClick}>Danger rating:  {selectedCard.danger_rating}</p>
+                        <p className="dino-intelligence" id="intelligence" onClick={handleClick}>Intelligence:  {selectedCard.intelligence}/10</p>
+                        <p className="dino-danger" id="danger_rating" onClick={handleClick}>Danger rating:  {selectedCard.danger_rating}/10</p>
                     </div>
                 </div>
                 :

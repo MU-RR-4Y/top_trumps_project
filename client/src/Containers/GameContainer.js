@@ -10,7 +10,7 @@ const GameContainer = () => {
     const [player,SetPlayer] = useState([]);
     const [cpu,SetCPU] = useState([]);
     const [middle,SetMiddle] = useState([]);
-    const [result,SetResult]= useState('');
+    const [result,SetResult]= useState(null);
     
     
     
@@ -22,24 +22,34 @@ const GameContainer = () => {
         return cards;
     };
 
-
-
+    
+    
+    
     //Comparison function
-
     const compareAttribute =(attribute)=>{
-        const key = (attribute.toLowerCase())
+        const key = (attribute)
         if (player[0][key] > cpu[0][key]){
             SetResult('player')
             
         } else if(cpu[0][key] > player[0][key]){
             SetResult('cpu')
-            
         } else{
             SetResult('draw')
-            
         }
-        
     };
+    
+    //resolve game
+    const resolveGame = (result)=>{
+        if(result === 'player'){
+            console.log('player wins')
+        } else if (result === 'cpu'){
+            console.log('cpu wins')
+        } else if(result === 'draw'){
+            console.log('draw')
+        }
+        SetResult('')
+    }
+    
     
     useEffect(() => {
         getDinosaurs()
@@ -50,8 +60,12 @@ const GameContainer = () => {
             SetPlayer(playerHand)
             SetCPU(cpuHand)
         })
-        
     },[]);
+
+    useEffect(()=>{
+        resolveGame(result)
+    },[result])
+    
     
     if (!player.length || !cpu.length) return null;
 
