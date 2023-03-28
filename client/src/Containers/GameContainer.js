@@ -174,7 +174,7 @@ const GameContainer = ({ playerName }) => {
                 </div>
                 <div className="middle-panel">
                     <div className="draw-pile">
-                        <p>Draw pile has {middle.length}</p>
+                        <p>DRAW PILE: {middle.length}</p>
                     </div>
                 </div>
                 <div className="cpu-card">
