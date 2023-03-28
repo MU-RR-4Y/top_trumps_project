@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cards.css";
+import ReactAudioPlayer from "react-audio-player";
 
 const ComputerCard = ({ cpu }) => {
     const mapArray = cpu.map((item) => { return item });
@@ -25,6 +26,8 @@ const ComputerCard = ({ cpu }) => {
                         <p className="dino-age">Age:  {mapArray[0].age} million years</p>
                         <p className="dino-intelligence">Intelligence:  {mapArray[0].intelligence}</p>
                         <p className="dino-danger">Danger rating:  {mapArray[0].danger_rating}</p>
+                        <ReactAudioPlayer src={require("../Audio/" + mapArray[0].sound)} controls volume={0.4} controlsList="nodownload noplaybackrate" />
+
                     </div>
                 </div>
             </div>
