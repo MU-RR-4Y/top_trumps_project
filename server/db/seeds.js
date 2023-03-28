@@ -209,7 +209,7 @@ db.dinosaurs.insertMany([
     {
         image: "Gallimimus.jpg",
         name: "Gallimimus",
-        diet: "Omnivore",
+        diet: "Carnivore",
         description: "Gallimimus was a fast-running dinosaur with a very long, thin, flattened, toothless, horny beak, a small head, and a relatively large brain. The bottom front part of its beak was shaped like a shovel. It had large eyes positioned on opposite sites of its head.",
         height: 9.8,
         weight: 440,
@@ -341,7 +341,7 @@ db.dinosaurs.insertMany([
     {
         image: "Archaeopteryx.jpg",
         name: "Archaeopteryx",
-        diet: "Omnivore",
+        diet: "Carnivore",
         description: "Archaeopteryx is often called the 'first bird', because the winged creature was the first to show an evolutionary link between birds and reptiles. Like modern day birds, it had feathers and hollow bones. Unlike modern birds, it had teeth and three claws on each wing.",
         height: 1,
         weight: 13,
