@@ -6,7 +6,7 @@ import "./GameContainer.css";
 import "./AudioControl.css";
 
 
-const GameContainer = () => {
+const GameContainer = ({ playerName }) => {
 
     const [player, setPlayer] = useState([]);
     const [cpu, setCPU] = useState([]);
@@ -125,7 +125,7 @@ const GameContainer = () => {
             <div className="cards-display">
                 <div className="player-card">
                     <div className="player-name">
-                        <p>Player</p>
+                        <p>{playerName}</p>
                     </div>
                     <PlayerCard player={player} compareAttribute={compareAttribute} />
                     <div className="cards-remaining">
