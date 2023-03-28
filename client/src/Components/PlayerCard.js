@@ -33,7 +33,9 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip }) => {
                         <p className="dino-age" id="age" onClick={handleClick}>Age:  {selectedCard.age} million years</p>
                         <p className="dino-intelligence" id="intelligence" onClick={handleClick}>Intelligence:  {selectedCard.intelligence}</p>
                         <p className="dino-danger" id="danger_rating" onClick={handleClick}>Danger rating:  {selectedCard.danger_rating}</p>
+                        <div className="playerAudio">
                         <ReactAudioPlayer src={require("../Audio/" + selectedCard.sound)} controls volume={0.4} controlsList="nodownload noplaybackrate"/>
+                        </div>
                     </div>
 
                 </div>

@@ -16,6 +16,7 @@
   border-radius: 20px;
   color: white;
   margin-left: 10px;
+  align-content: center;
 }
 
 .card-image {
@@ -149,6 +150,13 @@
   animation-timing-function: ease;
   border: 0.1em solid;
   border-radius: 10px;
+
+}
+.playerAudio{
+  display: flex;
+  justify-content: center;
+
+
 }
 
 
@@ -159,7 +167,7 @@
  .flip-card {
   background-color: transparent;
   width: 400px;
-  height: 600px;
+  height: 680px;
   /* border: 1px solid #f1f1f1; */
   margin-bottom: 10px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
