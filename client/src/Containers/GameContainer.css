@@ -48,7 +48,13 @@
     margin-top: 700px;
 }
 
-.draw-pile > p {
+.draw-pile>p {
     text-align: center;
     color: white;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

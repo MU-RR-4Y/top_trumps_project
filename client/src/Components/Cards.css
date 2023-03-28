@@ -192,10 +192,8 @@
 }
 
 /* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  
-  background-color: #bbb;
-  color: black;
+.flip-card-front {  
+  background-color: #000000;
 }
 
 /* Style the back side */

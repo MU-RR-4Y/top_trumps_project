@@ -12,11 +12,11 @@ const GameContainer = ({ playerName }) => {
     const [cpu, setCPU] = useState([]);
     const [middle, setMiddle] = useState([]);
     const [result, setResult] = useState(null);
-    const [gameUpdate,setGameUpdate]= useState(false);
+    const [gameUpdate, setGameUpdate] = useState(false);
     const [resultMessage, setResultMessage] = useState('');
     const [cpuCardVisible, setCpuCardVisible] = useState(false);
-    const [flipActive,SetFlipActive] = useState(false)
-    
+    const [flipActive, SetFlipActive] = useState(false)
+
 
     const shuffle = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
@@ -29,7 +29,7 @@ const GameContainer = ({ playerName }) => {
 
     //handleCardFlip
 
-    const handleCardFlip =()=>{
+    const handleCardFlip = () => {
         SetFlipActive(!flipActive);
 
     }
@@ -44,7 +44,7 @@ const GameContainer = ({ playerName }) => {
         console.log(mid.len)
         setMiddle(mid);
     };
-    
+
     const playerWin = () => {
         handleCardFlip()
         setTimeout(() => {
@@ -62,7 +62,7 @@ const GameContainer = ({ playerName }) => {
     const cpuWin = () => {
         handleCardFlip()
         setTimeout(() => {
-            
+
             const newCPU = [...cpu];
             const cpuWin = newCPU.concat(middle);
             cpuWin.shift(); // remove index [0] of cpuhand
@@ -75,10 +75,10 @@ const GameContainer = ({ playerName }) => {
 
     };
 
-    const draw =()=>{
+    const draw = () => {
         handleCardFlip()
         setTimeout(() => {
-            
+
             const newCPU = [...cpu];
             newCPU.shift();
             setCPU(newCPU);
@@ -102,9 +102,9 @@ const GameContainer = ({ playerName }) => {
             draw();
         }
         setResult('')
-       
+
     }
-    
+
     //Comparison function
     const compareAttribute = (attribute) => {
         middleDeck();
@@ -141,7 +141,7 @@ const GameContainer = ({ playerName }) => {
 
     if (!player.length || !cpu.length) return null;
 
-    
+
 
     // // limits audio volume to 20%
     // // works if page loaded then code applied - breaks app if refreshed
@@ -151,18 +151,17 @@ const GameContainer = ({ playerName }) => {
     //     audio.volume = 0.2
     //     }
     // setVolume()
- 
-   
+
+
 
 
     return (
         <>
-            <audio id="theme-audio" controls controlsList="nodownload noplaybackrate">
-                <source src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} type="audio/mpeg"></source>
-               
-            </audio>
-
-
+            <div className="audio-container">
+                <audio id="theme-audio" controls controlsList="nodownload noplaybackrate">
+                    <source src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} type="audio/mpeg"></source>
+                </audio>
+            </div>
             <div className="cards-display">
                 <div className="player-card">
                     <div className="player-name">
@@ -173,14 +172,16 @@ const GameContainer = ({ playerName }) => {
                         <p>{player.length} cards remaining</p>
                     </div>
                 </div>
-                <div className="draw-pile">
-                    <p>Draw pile: {middle.length}</p>
+                <div className="middle-panel">
+                    <div className="draw-pile">
+                        <p>Draw pile has {middle.length}</p>
+                    </div>
                 </div>
                 <div className="cpu-card">
                     <div className="player-name">
                         <p>Computer</p>
                     </div>
-                    <ComputerCard cpu={cpu} flipActive={flipActive}/>
+                    <ComputerCard cpu={cpu} flipActive={flipActive} />
                     <div className="cards-remaining">
                         <p>{cpu.length} cards remaining</p>
                     </div>
