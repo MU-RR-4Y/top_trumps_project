@@ -15,6 +15,8 @@ const GameContainer = () => {
     const [gameUpdate,setGameUpdate]= useState(false);
     const [resultMessage, setResultMessage] = useState('');
     const [cpuCardVisible, setCpuCardVisible] = useState(false);
+    const [flipActive,SetFlipActive] = useState(false)
+    
 
     const shuffle = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
@@ -23,6 +25,14 @@ const GameContainer = () => {
         }
         return cards;
     };
+
+
+    //handleCardFlip
+
+    const handleCardFlip =()=>{
+        SetFlipActive(!flipActive);
+
+    }
 
     // add exisiting index 0 cards to middle deck  
     const middleDeck = () => {
@@ -36,34 +46,47 @@ const GameContainer = () => {
     };
     
     const playerWin = () => {
-        const newPlayer = [...player];
-        const playerWin = newPlayer.concat(middle);
-        playerWin.shift();  // remove index [0] of playerhand
-        const newCPU = [...cpu];
-        newCPU.shift(); // remove index [0] of cpuhand
-        setPlayer(playerWin);
-        setCPU(newCPU);
-        setMiddle([]);
+        handleCardFlip()
+        setTimeout(() => {
+            const newPlayer = [...player];
+            const playerWin = newPlayer.concat(middle);
+            playerWin.shift();  // remove index [0] of playerhand
+            const newCPU = [...cpu];
+            newCPU.shift(); // remove index [0] of cpuhand
+            setPlayer(playerWin);
+            setCPU(newCPU);
+            setMiddle([]);
+        }, 800);
     };
 
     const cpuWin = () => {
-        const newCPU = [...cpu];
-        const cpuWin = newCPU.concat(middle);
-        cpuWin.shift(); // remove index [0] of cpuhand
-        const newPlayer = [...player];
-        newPlayer.shift(); // remove index [0] of playerhand
-        setCPU(cpuWin);
-        setPlayer(newPlayer);
-        setMiddle([]);
+        handleCardFlip()
+        setTimeout(() => {
+            
+            const newCPU = [...cpu];
+            const cpuWin = newCPU.concat(middle);
+            cpuWin.shift(); // remove index [0] of cpuhand
+            const newPlayer = [...player];
+            newPlayer.shift(); // remove index [0] of playerhand
+            setCPU(cpuWin);
+            setPlayer(newPlayer);
+            setMiddle([]);
+        }, 800);
+
     };
 
     const draw =()=>{
-        const newCPU = [...cpu];
-        newCPU.shift();
-        setCPU(newCPU);
-        const newPlayer = [...player];
-        newPlayer.shift();
-        setPlayer(newPlayer);
+        handleCardFlip()
+        setTimeout(() => {
+            
+            const newCPU = [...cpu];
+            newCPU.shift();
+            setCPU(newCPU);
+            const newPlayer = [...player];
+            newPlayer.shift();
+            setPlayer(newPlayer);
+        }, 800);
+
     }
 
     //resolve game function
@@ -79,6 +102,7 @@ const GameContainer = () => {
             draw();
         }
         setResult('')
+       
     }
     
     //Comparison function
@@ -127,7 +151,7 @@ const GameContainer = () => {
                     <div className="player-name">
                         <p>Player</p>
                     </div>
-                    <PlayerCard player={player} compareAttribute={compareAttribute} />
+                    <PlayerCard player={player} compareAttribute={compareAttribute} handleCardFlip={handleCardFlip} />
                     <div className="cards-remaining">
                         <p>{player.length} cards remaining</p>
                     </div>
@@ -139,7 +163,7 @@ const GameContainer = () => {
                     <div className="player-name">
                         <p>Computer</p>
                     </div>
-                    <ComputerCard cpu={cpu} />
+                    <ComputerCard cpu={cpu} flipActive={flipActive}/>
                     <div className="cards-remaining">
                         <p>{cpu.length} cards remaining</p>
                     </div>

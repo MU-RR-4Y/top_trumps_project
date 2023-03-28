@@ -1,13 +1,14 @@
 import React from "react";
 import "./Cards.css";
 
-const PlayerCard = ({ player, compareAttribute }) => {
+const PlayerCard = ({ player, compareAttribute,handleCardFlip }) => {
 
     const selectedCard = player[0];
     const length = player.length;
 
     const handleClick = (e) => {
-        compareAttribute(e.target.id)
+        handleCardFlip()
+        setTimeout(()=>(compareAttribute(e.target.id)),3000)
     };
 
     return (
