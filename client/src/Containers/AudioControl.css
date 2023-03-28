@@ -1,0 +1,30 @@
+
+audio {
+    max-width: 175px;
+    border: 1px solid;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px #0000008d;
+}
+
+audio::-webkit-media-controls-panel {
+    background-image: linear-gradient(green, rgb(194, 253, 68), green);
+
+  }
+
+  audio::-webkit-media-controls-timeline {
+    display:none;
+    
+  }
+
+  audio::-webkit-media-controls-current-time-display{
+    display: none;
+  }
+
+  audio::-webkit-media-controls-time-remaining-display {
+    display: none;
+  }
+
+  audio::-webkit-media-controls-volume-slider { 
+    
+
+  }

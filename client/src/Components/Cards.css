@@ -1,0 +1,232 @@
+.card-border {
+  width: 400px;
+  height: 680px;
+  background-image: linear-gradient(to bottom right, green, rgb(194, 253, 68), green);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 10px #0000008d;
+  margin-bottom: 10px;
+}
+
+.card-front {
+  width: 380px;
+  height: 660px;
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  margin-left: 10px;
+  align-content: center;
+}
+
+.card-image {
+  border-radius: 20px;
+  padding-top: 10px;
+  background-image: radial-gradient(circle, white, white, white, rgb(0, 175, 0), black, black);
+}
+
+.dino-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.dino-info {
+  font-size: 0.75em;
+  font-style: italic;
+  margin: 0;
+  height: 70px;
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dino-weight {
+  transition: color 0.3s, transform 1s;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 0.1em solid black;
+}
+
+.dino-weight:hover {
+  cursor: pointer;
+  color: rgb(174, 255, 0);
+  animation-name: hoverAnimation;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  border: 0.1em solid;
+  border-radius: 10px;
+}
+
+.dino-height {
+  transition: color 0.3s, transform 1s;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 0.1em solid black;
+}
+
+.dino-height:hover {
+  cursor: pointer;
+  color: rgb(174, 255, 0);
+  animation-name: hoverAnimation;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  border: 0.1em solid;
+  border-radius: 10px;
+}
+
+.dino-length {
+  transition: color 0.3s, transform 1s;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 0.1em solid black;
+}
+
+.dino-length:hover {
+  cursor: pointer;
+  color: rgb(174, 255, 0);
+  animation-name: hoverAnimation;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  border: 0.1em solid;
+  border-radius: 10px;
+}
+
+.dino-age {
+  transition: color 0.3s, transform 1s;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 0.1em solid black;
+}
+
+.dino-age:hover {
+  cursor: pointer;
+  color: rgb(174, 255, 0);
+  animation-name: hoverAnimation;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  border: 0.1em solid;
+  border-radius: 10px;
+}
+
+.dino-intelligence {
+  transition: color 0.3s, transform 1s;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 0.1em solid black;
+}
+
+.dino-intelligence:hover {
+  cursor: pointer;
+  color: rgb(174, 255, 0);
+  animation-name: hoverAnimation;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  border: 0.1em solid;
+  border-radius: 10px;
+}
+
+.dino-danger {
+  transition: color 0.3s, transform 1s;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 0.1em solid black;
+}
+
+.dino-danger:hover {
+  cursor: pointer;
+  color: rgb(174, 255, 0);
+  animation-name: hoverAnimation;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  border: 0.1em solid;
+  border-radius: 10px;
+
+}
+.playerAudio{
+  display: flex;
+  justify-content: center;
+
+
+}
+
+
+/* flip card styling */
+
+
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 680px;
+  /* border: 1px solid #f1f1f1; */
+  margin-bottom: 10px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.is-flipped{
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  border-radius: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {  
+  background-color: #000000;
+}
+
+/* Style the back side */
+.flip-card-back {
+ transform: rotateY(180deg);
+}
+
+.styled-flip{
+  border-radius: 25px;
+}
+
+@keyframes hoverAnimation {
+  0% {
+    color: white;
+  }
+
+  33% {
+    color: rgb(174, 255, 0);
+  }
+
+  66% {
+    color: white;
+  }
+
+  100% {
+    color: rgb(174, 255, 0);
+  }
+}

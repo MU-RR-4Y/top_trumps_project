@@ -1,0 +1,60 @@
+.cards-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cards-display p {
+    font-weight: bold;
+}
+
+.cards-remaining {
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color: rgba(0, 128, 0, 0.383);
+    border: 3px solid green;
+    color: white;
+    border-radius: 25px;
+}
+
+.player-name p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cpu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.draw-pile {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 128, 0, 0.383);
+    border: 3px solid green;
+    border-radius: 25px;
+    margin-top: 700px;
+}
+
+.draw-pile>p {
+    text-align: center;
+    color: white;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
