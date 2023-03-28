@@ -9,7 +9,7 @@ const ComputerCard = ({ cpu }) => {
             <div className="card-border">
                 <div className="card-front">
                     <div className="card-image">
-                        <img src={require("../images/" + mapArray[0].image)} alt=""
+                        <img src={require("../Images/" + mapArray[0].image)} alt=""
                             height="200" width="325" style={{ objectFit: "contain" }} />
                     </div>
                     <p className="dino-name">

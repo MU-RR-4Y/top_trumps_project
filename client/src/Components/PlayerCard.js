@@ -16,7 +16,7 @@ const PlayerCard = ({ player, compareAttribute }) => {
                 <div className="card-border">
                     <div className="card-front">
                         <div className="card-image">
-                            <img src={require("../images/" + selectedCard.image)} alt=""
+                            <img src={require("../Images/" + selectedCard.image)} alt=""
                                 height="200" width="325" style={{ objectFit: "contain" }} />
                         </div>
                         <p className="dino-name">
