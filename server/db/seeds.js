@@ -4,6 +4,7 @@ db.dropDatabase();
 db.dinosaurs.insertMany([
     {
         image: "Pachycephalosaurus.jpg",
+        sound: "Pachycephalosaurus.mp3",
         name: "Pachycephalosaurus",
         diet: "Herbivore",
         description: "Pachycephalosaurus is famous for having a large, bony dome atop its skull, up to 25 cm thick, which safely cushioned its tiny brain. Pachycephalosaurs were herding dinosaurs that lived in small groups in coastal and upland regions.",
@@ -16,6 +17,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "TRex.jpg",
+        sound: "TRex.mp3",
         name: "Tyrannosaurus Rex",
         diet: "Carnivore",
         description: "Tyrannosaurus-rex was one of the most ferocious predators to ever walk the Earth. With a massive body, sharp teeth, and jaws so powerful they could crush a car.",
@@ -28,6 +30,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Barosaurus.jpg",
+        sound: "Barosaurus.mp3",
         name: "Barosaurus",
         diet: "Herbivore",
         description: "Barosaurus was a giant dinosaur that was very slow moving. It was a long-tailed, long-necked, plant-eating sauropod closely related to the more familiar Diplodocus. ",
@@ -40,6 +43,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Heterodontosaurus.jpg",
+        sound: "Heterodontosaurus.mp3",
         name: "Heterodontosaurus",
         diet: "Herbivore",
         description: "Heterodontosaurus was a small, lightly-built dinosaur with three different kinds of teeth (hence its name) and a beak. It had five-fingered hands with claws, and three-toed feet with claws.",
@@ -52,6 +56,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Suchomimus.jpg",
+        sound: "Suchomimus.mp3",
         name: "Suchomimus",
         diet: "Carnivore",
         description: "Suchomimus had a two-foot-high sail on its lower back. This dinosaur had a very long snout - around 1.2m - and huge, foot-long thumb claws. It is thought these adaptations were used to catch fish.",
@@ -64,6 +69,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Pachyrhinosaurus.jpg",
+        sound: "Pachyrhinosaurus.mp3",
         name: "Pachyrhinosaurus",
         diet: "Herbivore",
         description: "Pachyrhinosaurus was a large, plant-eating dinosaur that had a bony, spiked neck frill, four short legs, and a short tail. Pachyrhinosaurus may or may not have had a snout horn - it did have a large bony bump on its nose.",
@@ -76,6 +82,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Compsognathus.jpg",
+        sound: "Compsognathus.mp3",
         name: "Compsognathus",
         diet: "Carnivore",
         description: "Compsognathus was a bird-like dinosaur that walked on two long, thin legs; it had three-toed feet. A long tail acted as a counterbalance and for stability during fast turns. It had short arms with two clawed fingers on each hand.",
@@ -88,6 +95,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Iguanodon.jpg",
+        sound: "Iguanodon.mp3",
         name: "Iguanodon",
         diet: "Herbivore",
         description: "Iguanodon was a plant-eating dinosaur that had a conical spike on each thumb. It was probably a herding animal, as evidenced by bonebed discoveries in Belgium. In these bonebeds, dozens of Iguanodon fossils were found together, suggesting that they congregated during their lives.",
@@ -100,6 +108,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Pentaceratops.jpg",
+        sound: "Pentaceratops.mp3",
         name: "Pentaceratops",
         diet: "Herbivore",
         description: "Pentaceratops was a rhinoceros-like plant-eating dinosaur. It walked on four sturdy legs and had three horns on its face along with a large bony plate projecting from the back of its skull (a frill). ",
@@ -112,6 +121,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Coelophysis.jpg",
+        sound: "Coelophysis.mp3",
         name: "Coelophysis",
         diet: "Carnivore",
         description: "Coelophysis was a small, lightly-built dinosaur that walked on two long legs. This predator was about 2.8m long. It had light, hollow bones, a long, pointed head with dozens of small, serrated teeth, three clawed fingers on its hands, and a long neck.",
@@ -124,6 +134,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Velociraptor.jpg",
+        sound: "Velociraptor.mp3",
         name: "Velociraptor",
         diet: "Carnivore",
         description: "Velociraptor had a sharp, deadly, sickle-shaped, retractible, 9 cm long claw on each foot (located on each second toe). They may have been able to run up to roughly 40 mph for short bursts. It is thought they hunted together in packs.",
@@ -136,6 +147,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Centrosaurus.jpg",
+        sound: "Centrosaurus.mp3",
         name: "Centrosaurus",
         diet: "Herbivore",
         description: "Centrosaurus was a four-legged plant-eating dinosaur that had many horns on its head. They lived in herds during the late Cretaceous period. This dinosaur was an herbivore that ate low-lying plants.",
@@ -148,6 +160,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Megalosaurus.jpg",
+        sound: "Megalosaurus.mp3",
         name: "Megalosaurus",
         diet: "Carnivore",
         description: "Megalosaurus was a large, meat-eating dinosaur. It walked on two powerful legs, had a strong, short neck, and a large head with sharp, serrated teeth. Megalosaurus was the first dinosaur fossil discovered (in England in 1676).",
@@ -160,6 +173,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Protoceratops.jpg",
+        sound: "Protoceratops.mp3",
         name: "Protoceratops",
         diet: "Herbivore",
         description: "Protoceratops walked on four legs, had a large head, a bulky body, a parrot-like beak, cheek teeth, and a small frill on its head. Males may have had larger frills than females, indicating that the frill may have been used in courtship and mating.",
@@ -172,6 +186,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Giganotosaurus.jpg",
+        sound: "Giganotosaurus.mp3",
         name: "Giganotosaurus",
         diet: "Carnivore",
         description: "The longest meat-eating dinosaur yet discovered is Giganotosaurus, a 14m long behemoth, who weighed about 8 tons and stood 12 feet tall (at the hips). It walked on two legs, had a brain the size of a banana, and had enormous jaws with 8-inch long serrated teeth in a 1.8 m long skull. ",
@@ -184,6 +199,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Brachiosaurus.jpg",
+        sound: "Brachiosaurus.mp3",
         name: "Brachiosaurus",
         diet: "Herbivore",
         description: "Brachiosaurus was one of the tallest and largest dinosaurs yet found. It had a long neck, small head, and relatively short, thick tail. They walked on four legs and, like the other Brachiosaurids and unlike most dinosaurs, its front legs were longer than its hind legs.",
@@ -196,6 +212,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Herrerasaurus.jpg",
+        sound: "Herrerasaurus.mp3",
         name: "Herrerasaurus",
         diet: "Carnivore",
         description: "Herrerasaurus was one of the earliest dinosaurs. It walked on two long legs and had sharp teeth. The arms were short and the fingers had sharp claws. The first Herrerasaurus fossil was found in 1958 by Don Victorino Herrera.",
@@ -208,8 +225,9 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Gallimimus.jpg",
+        sound: "Gallimimus.mp3",
         name: "Gallimimus",
-        diet: "Carnivore",
+        diet: "Omnivore",
         description: "Gallimimus was a fast-running dinosaur with a very long, thin, flattened, toothless, horny beak, a small head, and a relatively large brain. The bottom front part of its beak was shaped like a shovel. It had large eyes positioned on opposite sites of its head.",
         height: 9.8,
         weight: 440,
@@ -220,6 +238,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Triceratops.jpg",
+        sound: "Triceratops.mp3",
         name: "Triceratops",
         diet: "Herbivore",
         description: "Triceratops walked on four sturdy legs and had three horns on its face along with a large bony plate projecting from the back of its skull (a frill). One short horn above its parrot-like beak and two longer horns above its eyes probably provided protection from predators.",
@@ -232,6 +251,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Corythosaurus.jpg",
+        sound: "Corythosaurus.mp3",
         name: "Corythosaurus",
         diet: "Herbivore",
         description: "Corythosaurus was a large duck-billed dinosaur with a hollow, bony crest in the shape of a helmet. Their nostrils went up through the crest, which may have been used to make sounds, as a cooling device, courtship displays, and/or as a sense-of-smell enhancer.",
@@ -244,6 +264,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Maiasaura.jpg",
+        sound: "Maiasaura.mp3",
         name: "Maiasaura",
         diet: "Herbivore",
         description: "Maiasaura was the first dinosaur that was found alongside its young, eggs, and nests - suggesting it nurtured its young. It's a duck-billed dinosaur with a flat skull. This plant-eater had a toothless beak, cheek pouches, and many self-sharpening teeth.",
@@ -256,6 +277,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Dimorphodon.jpg",
+        sound: "Dimorphodon.mp3",
         name: "Dimorphodon",
         diet: "Carnivore",
         description: "Strictly not a dinosaur, but a type of extinct, flying reptile. It had a huge head with deep, wide, toothed jaws resembling the beak of the modern-day puffin, a short neck, and a diamond-shaped flap of skin at the end of the long, pointed tail.",
@@ -268,6 +290,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Stegosaurus.jpg",
+        sound: "Stegosaurus.mp3",
         name: "Stegosaurus",
         diet: "Herbivore",
         description: "Stegosaurus had 17 bony plates embedded in two rows along its back. The largest of these triangular plates was about 76 cm tall and just as long. Stegosaurus also had spikes at the end of its flexible tail.",
@@ -280,6 +303,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Stenonychosaurus.jpg",
+        sound: "Stenonychosaurus.mp3",
         name: "Stenonychosaurus",
         diet: "Carnivore",
         description: "Stenonychosaurus had the largest brain of any know dinosaur - giving it a reputation as the 'Brainiest Dinosaur' among all. Their eyes were very large (perhaps suggesting a partially nocturnal lifestyle), and slightly forward facing. ",
@@ -292,6 +316,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Hypsilophodon.jpg",
+        sound: "Hypsilophodon.mp3",
         name: "Hypsilophodon",
         diet: "Herbivore",
         description: "Slender legs and a stiffened tail gave the Hypsilophodon speed and agility. It had large eyes, strong jaws, five-fingered hands and four-toed feet. They had a beak made of horn and 28-30 self-sharpening teeth in a small skull",
@@ -304,6 +329,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Camarasaurus.jpg",
+        sound: "Camarasaurus.mp3",
         name: "Camarasaurus",
         diet: "Herbivore",
         description: "Over 100 different specimens of Camarasaurus have been found by paleontologists. It was a long-necked, long-tailed giant herbivore. It also had an enlarged head with a blunt snout and spoon-shaped teeth.",
@@ -316,6 +342,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Styracosaurus.jpg",
+        sound: "Styracosaurus.mp3 ",
         name: "Styracosaurus",
         diet: "Herbivore",
         description: "The Styracosaurus had a very distinctive skull, with 7 to 9 horns. These horns probably provided protection from predators, and were possibly used in mating rituals and rivalry. It had a short, thick, pointed tail, a bulky body and a large skull and beak.",
@@ -328,6 +355,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Euoplocephalus.jpg",
+        sound: "Euoplocephalus.mp3",
         name: "Euoplocephalus",
         diet: "Herbivore",
         description: "The Euoplocephalus was roughly the size of a rhinoceros, it probably weighed a lot more thanks to its thick armour. Its entire top side was heavily protected from carnivores with thick, oval plates embedded in leathery skin, rows of large spikes along its body, large horns protecting the head, and a raised, club-like tail. ",
@@ -340,8 +368,9 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Archaeopteryx.jpg",
+        sound: "Archaeopteryx.mp3",
         name: "Archaeopteryx",
-        diet: "Carnivore",
+        diet: "Omnivore",
         description: "Archaeopteryx is often called the 'first bird', because the winged creature was the first to show an evolutionary link between birds and reptiles. Like modern day birds, it had feathers and hollow bones. Unlike modern birds, it had teeth and three claws on each wing.",
         height: 1,
         weight: 13,
@@ -352,6 +381,7 @@ db.dinosaurs.insertMany([
     },
     {
         image: "Oviraptor.jpg",
+        sound: "Oviraptor.mp3",
         name: "Oviraptor",
         diet: "Carnivore",
         description: "Oviraptor was a small, bird-like dinosaur. Its name translates to 'egg thief', though they were quite protective of their own eggs. It was lightly built, fast-moving with long legs. Its strangely-shaped, parrot-like head had a short, toothless beak and extremely powerful jaws, built for crushing action. ",
