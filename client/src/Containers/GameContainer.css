@@ -10,7 +10,7 @@
 
 .cards-remaining {
     text-align: center;
-    width: 300px;
+    width: 250px;
     height: 50px;
     background-color: rgba(0, 128, 0, 0.383);
     border: 3px solid green;
@@ -51,5 +51,4 @@
 .draw-pile > p {
     text-align: center;
     color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
