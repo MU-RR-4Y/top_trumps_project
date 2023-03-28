@@ -97,11 +97,28 @@ const GameContainer = () => {
 
     if (!player.length || !cpu.length) return null;
 
+    
+
+    // // limits audio volume to 20%
+    // // works if page loaded then code applied - breaks app if refreshed
+
+    // const audio = document.getElementById("theme-audio")
+    // function setVolume(){
+    //     audio.volume = 0.2
+    //     }
+    // setVolume()
+ 
+   
+
+
     return (
         <>
             <audio id="theme-audio" controls controlsList="nodownload noplaybackrate">
                 <source src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} type="audio/mpeg"></source>
+               
             </audio>
+
+
             <div className="cards-display">
                 <div className="player-card">
                     <div className="player-name">
@@ -128,6 +145,11 @@ const GameContainer = () => {
         </>
     );
 
+
+
+
 };
+
+
 
 export default GameContainer; 
