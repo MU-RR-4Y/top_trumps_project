@@ -20,7 +20,7 @@ function App() {
       {!gameStarted ? 
         <div className="home-page">
           <h1>Please enter your name:</h1>
-          <input type="text" id="player-name" placeholder="Player" onChange={handlePlayerNameChange}></input>
+          <input type="text" id="player-name" placeholder="Player" maxLength="15" onChange={handlePlayerNameChange}></input>
           <div className="start-game">
             <h1 onClick={handleStartGame}>Start</h1>
           </div>
