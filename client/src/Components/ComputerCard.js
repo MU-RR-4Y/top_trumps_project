@@ -10,14 +10,14 @@ const ComputerCard = ({ cpu, flipActive }) => {
         <div className="flip-card">
                 <div className= {`flip-card-inner ${flipActive? 'is-flipped' : null }`}>
                     <div className={'flip-card-front'}>
-                           <img src={require('../Images/_Logo.jpg')} height="600" width="400" className="styled-flip"  alt="" />
+                           <img src={require('../Images/_Logo.jpg')} height="600" width="400" className="styled-flip"  alt="" class="center" style={{ objectFit: "contain" }}/>
                     </div>
                     <div className="flip-card-back">
                         <div className="card-border">
                             <div className="card-front">
                                 <div className="card-image">
                                     <img src={require("../Images/" + mapArray[0].image)} alt=""
-                                        height="200" width="325" style={{ objectFit: "contain" }} />
+                                        height="200" width="380" style={{ objectFit: "contain" }} />
                                 </div>
                                 <p className="dino-name">
                                     {mapArray[0].name}{mapArray[0].diet == "Herbivore" ? " 🥬" : " 🥩"}
