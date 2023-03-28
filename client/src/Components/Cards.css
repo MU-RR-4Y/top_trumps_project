@@ -1,6 +1,6 @@
 .card-border {
   width: 400px;
-  height: 600px;
+  height: 680px;
   background-image: linear-gradient(to bottom right, green, rgb(194, 253, 68), green);
   border-radius: 25px;
   display: flex;
@@ -159,7 +159,7 @@
  .flip-card {
   background-color: transparent;
   width: 400px;
-  height: 600px;
+  height: 680px;
   /* border: 1px solid #f1f1f1; */
   margin-bottom: 10px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
