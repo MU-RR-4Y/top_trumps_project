@@ -16,8 +16,8 @@ const GameContainer = ({ playerName }) => {
     const [gameUpdate, setGameUpdate] = useState(false);
     const [resultMessage, setResultMessage] = useState('');
     const [cpuCardVisible, setCpuCardVisible] = useState(false);
-    const [flipActive, SetFlipActive] = useState(false)
-
+    const [flipActive,SetFlipActive] = useState(false);
+    const [clicked, setClicked]= useState(false);
 
     const shuffle = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
@@ -56,8 +56,9 @@ const GameContainer = ({ playerName }) => {
             newCPU.shift(); // remove index [0] of cpuhand
             setPlayer(playerWin);
             setCPU(newCPU);
-            setMiddle([]);
+            setClicked(false);
         }, 800);
+        setMiddle([]);
     };
 
     const cpuWin = () => {
@@ -71,8 +72,9 @@ const GameContainer = ({ playerName }) => {
             newPlayer.shift(); // remove index [0] of playerhand
             setCPU(cpuWin);
             setPlayer(newPlayer);
-            setMiddle([]);
+            setClicked(false);
         }, 800);
+        setMiddle([]);
 
     };
 
@@ -87,6 +89,7 @@ const GameContainer = ({ playerName }) => {
             newPlayer.shift();
             setPlayer(newPlayer);
         }, 800);
+        setClicked(false);
 
     }
 
@@ -162,7 +165,7 @@ const GameContainer = ({ playerName }) => {
                     <div className="player-name">
                         <p>{playerName}</p>
                     </div>
-                    <PlayerCard player={player} compareAttribute={compareAttribute} handleCardFlip={handleCardFlip} />
+                    <PlayerCard player={player} compareAttribute={compareAttribute} handleCardFlip={handleCardFlip} clicked={clicked} setClicked={setClicked} />
                     <div className="cards-remaining">
                         <p>{player.length} cards remaining</p>
                     </div>
