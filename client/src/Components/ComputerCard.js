@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cards.css";
+import ReactAudioPlayer from "react-audio-player";
 
 const ComputerCard = ({ cpu, flipActive }) => {
     const mapArray = cpu.map((item) => { return item });
@@ -35,6 +36,18 @@ const ComputerCard = ({ cpu, flipActive }) => {
                             </div>
                         </div>
                     </div>
+                    <div className="dino-stats">
+                        <p className="dino-weight">Weight:  {mapArray[0].weight.toLocaleString()} lbs</p>
+                        <p className="dino-height">Height:  {mapArray[0].height} ft</p>
+                        <p className="dino-length">Length:  {mapArray[0].length} ft</p>
+                        <p className="dino-age">Age:  {mapArray[0].age} million years</p>
+                        <p className="dino-intelligence">Intelligence:  {mapArray[0].intelligence}</p>
+                        <p className="dino-danger">Danger rating:  {mapArray[0].danger_rating}</p>
+                        <ReactAudioPlayer src={require("../Audio/" + mapArray[0].sound)} controls volume={0.4} controlsList="nodownload noplaybackrate" />
+
+                    </div>
+                </div>
+            </div>
                 </div>   
         </div>         
         </>

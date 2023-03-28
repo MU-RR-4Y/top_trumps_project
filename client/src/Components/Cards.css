@@ -1,6 +1,6 @@
 .card-border {
   width: 400px;
-  height: 600px;
+  height: 680px;
   background-image: linear-gradient(to bottom right, green, rgb(194, 253, 68), green);
   border-radius: 25px;
   display: flex;
@@ -11,7 +11,7 @@
 
 .card-front {
   width: 380px;
-  height: 580px;
+  height: 660px;
   background-color: black;
   border-radius: 20px;
   color: white;
@@ -204,7 +204,6 @@
 .styled-flip{
   border-radius: 25px;
 }
-
 
 @keyframes hoverAnimation {
   0% {

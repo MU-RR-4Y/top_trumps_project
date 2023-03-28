@@ -1,5 +1,7 @@
 import React from "react";
 import "./Cards.css";
+import ReactAudioPlayer from "react-audio-player";
+
 
 const PlayerCard = ({ player, compareAttribute,handleCardFlip }) => {
 
@@ -31,6 +33,7 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip }) => {
                         <p className="dino-age" id="age" onClick={handleClick}>Age:  {selectedCard.age} million years</p>
                         <p className="dino-intelligence" id="intelligence" onClick={handleClick}>Intelligence:  {selectedCard.intelligence}</p>
                         <p className="dino-danger" id="danger_rating" onClick={handleClick}>Danger rating:  {selectedCard.danger_rating}</p>
+                        <ReactAudioPlayer src={require("../Audio/" + selectedCard.sound)} controls volume={0.4} controlsList="nodownload noplaybackrate"/>
                     </div>
 
                 </div>

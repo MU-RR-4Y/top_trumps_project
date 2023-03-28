@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PlayerCard from "../Components/PlayerCard";
 import ComputerCard from "../Components/ComputerCard";
 import { getDinosaurs } from "../Services/GameService";
+import ReactAudioPlayer from "react-audio-player";
 import "./GameContainer.css";
 import "./AudioControl.css";
 
@@ -142,7 +143,6 @@ const GameContainer = ({ playerName }) => {
     if (!player.length || !cpu.length) return null;
 
 
-
     // // limits audio volume to 20%
     // // works if page loaded then code applied - breaks app if refreshed
 
@@ -152,15 +152,10 @@ const GameContainer = ({ playerName }) => {
     //     }
     // setVolume()
 
-
-
-
     return (
         <>
             <div className="audio-container">
-                <audio id="theme-audio" controls controlsList="nodownload noplaybackrate">
-                    <source src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} type="audio/mpeg"></source>
-                </audio>
+                <ReactAudioPlayer src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} controls volume={0.05} controlsList="nodownload noplaybackrate" loop />
             </div>
             <div className="cards-display">
                 <div className="player-card">
