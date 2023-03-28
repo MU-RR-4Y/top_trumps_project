@@ -7,7 +7,7 @@ audio {
 }
 
 audio::-webkit-media-controls-panel {
-    background-image: linear-gradient(to bottom right, green, rgb(194, 253, 68), green);
+    background-image: linear-gradient(green, rgb(194, 253, 68), green);
 
   }
 

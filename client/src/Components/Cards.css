@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   box-shadow: 10px 10px 10px #0000008d;
+  margin-bottom: 10px;
 }
 
 .card-front {
