@@ -1,5 +1,4 @@
 .cards-display {
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -11,10 +10,10 @@
 
 .cards-remaining {
     text-align: center;
-    width: 300px;
+    width: 250px;
     height: 50px;
     background-color: rgba(0, 128, 0, 0.383);
-    border: 3px solid rgb(194, 253, 68);
+    border: 3px solid green;
     color: white;
     border-radius: 25px;
 }
@@ -23,7 +22,8 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     font-size: 4rem;
-    margin: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .player-card {
@@ -35,5 +35,26 @@
 .cpu-card {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.draw-pile {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 128, 0, 0.383);
+    border: 3px solid green;
+    border-radius: 25px;
+    margin-top: 700px;
+}
+
+.draw-pile>p {
+    text-align: center;
+    color: white;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }

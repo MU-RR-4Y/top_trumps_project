@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Cards.css";
+import ReactAudioPlayer from "react-audio-player";
+
 
 const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClicked}) => {
 
@@ -19,7 +21,7 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClic
                     <div className="card-front">
                         <div className="card-image">
                             <img src={require("../Images/" + selectedCard.image)} alt=""
-                                height="200" width="325" style={{ objectFit: "contain" }} />
+                                height="200" width="380" class="center" style={{ objectFit: "contain" }} />
                         </div>
                         <p className="dino-name">
                             {selectedCard.name}{selectedCard.diet == "Herbivore" ? " 🥬" : " 🥩"}
@@ -58,6 +60,9 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClic
                         :
                         <p className="dino-danger" id="danger_rating" onClick={handleClick}>Danger rating:  {selectedCard.danger_rating}</p>
                         }
+                        <div className="playerAudio">
+                          <ReactAudioPlayer src={require("../Audio/" + selectedCard.sound)} controls volume={0.4} controlsList="nodownload noplaybackrate"/>
+                        </div>
                     </div>
 
                 </div>
