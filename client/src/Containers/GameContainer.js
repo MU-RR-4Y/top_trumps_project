@@ -5,12 +5,14 @@ import { getDinosaurs } from "../Services/GameService";
 import "./GameContainer.css";
 import "./AudioControl.css";
 
+
 const GameContainer = () => {
 
     const [player, setPlayer] = useState([]);
     const [cpu, setCPU] = useState([]);
     const [middle, setMiddle] = useState([]);
     const [result, setResult] = useState(null);
+    const [gameUpdate,setGameUpdate]= useState(false);
     const [resultMessage, setResultMessage] = useState('');
     const [cpuCardVisible, setCpuCardVisible] = useState(false);
 
@@ -24,26 +26,15 @@ const GameContainer = () => {
 
     // add exisiting index 0 cards to middle deck  
     const middleDeck = () => {
+        console.log(middle.len)
         const mid = [...middle];
+        console.log(mid.len)
         mid.push(player[0]);
         mid.push(cpu[0]);
+        console.log(mid.len)
         setMiddle(mid);
     };
-
-    //Comparison function
-    const compareAttribute = (attribute) => {
-        middleDeck();
-        const key = (attribute);
-        if (player[0][key] > cpu[0][key]) {
-            setResult('player')
-        } else if (cpu[0][key] > player[0][key]) {
-            setResult('cpu')
-        } else {
-            setResult('draw')
-        }
-        setCpuCardVisible(true);
-    };
-
+    
     const playerWin = () => {
         const newPlayer = [...player];
         const playerWin = newPlayer.concat(middle);
@@ -66,7 +57,16 @@ const GameContainer = () => {
         setMiddle([]);
     };
 
-    //resolve game
+    const draw =()=>{
+        const newCPU = [...cpu];
+        newCPU.shift();
+        setCPU(newCPU);
+        const newPlayer = [...player];
+        newPlayer.shift();
+        setPlayer(newPlayer);
+    }
+
+    //resolve game function
     const resolveGame = (result) => {
         if (result === 'player') {
             setResultMessage('Player wins!!');
@@ -76,10 +76,29 @@ const GameContainer = () => {
             cpuWin();
         } else if (result === 'draw') {
             setResultMessage('Draw');
+            draw();
         }
         setResult('')
     }
+    
+    //Comparison function
+    const compareAttribute = (attribute) => {
+        middleDeck();
+        const key = (attribute);
+        if (player[0][key] > cpu[0][key]) {
+            setResult('player')
+            setGameUpdate(!gameUpdate)
+        } else if (cpu[0][key] > player[0][key]) {
+            setResult('cpu')
+            setGameUpdate(!gameUpdate)
+        } else {
+            setResult('draw')
+            setGameUpdate(!gameUpdate)
+        }
+        setCpuCardVisible(true);
+    };
 
+    //initial fectch request
     useEffect(() => {
         getDinosaurs()
             .then((data) => {
@@ -91,9 +110,10 @@ const GameContainer = () => {
             });
     }, []);
 
+    // execute game functionality once result and game update have been set in compare function 
     useEffect(() => {
         resolveGame(result);
-    }, [result]);
+    }, [gameUpdate]);
 
     if (!player.length || !cpu.length) return null;
 
