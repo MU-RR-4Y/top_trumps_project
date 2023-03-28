@@ -13,7 +13,7 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip }) => {
 
     return (
         <>
-            {length >= 1 ?
+            {length > 0 ?
                 <div className="card-border">
                     <div className="card-front">
                         <div className="card-image">
