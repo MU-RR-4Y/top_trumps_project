@@ -34,6 +34,7 @@ const GameContainer = ({ playerName }) => {
 
     useEffect (()=>{
         audioElement.current.volume="0.1"
+        audioElement.current.loop="true"
         audioOn ? audioElement.current.play() : audioElement.current.pause()
         
     },[audioOn, []]);

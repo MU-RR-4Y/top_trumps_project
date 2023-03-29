@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Cards.css";
-import ReactAudioPlayer from "react-audio-player";
-
 
 const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClicked}) => {
 
+    const [playerEffectOn, setplayerEffectOn] = useState(false);
+
     const selectedCard = player[0];
     const length = player.length;
+
+    const playerAudioElement = useRef(null)
 
     const handleClick = (e) => {
         setClicked(true)
         handleCardFlip()
         setTimeout(()=>(compareAttribute(e.target.id)),6000)
     };
+
+    useEffect (()=>{
+        playerAudioElement.current.volume="0.4"
+        playerAudioElement ? playerAudioElement.current.play() : playerAudioElement.current.pause()
+        
+    },[playerEffectOn]);
+
+    const togglePlayDinoPlayer = () => {
+        setplayerEffectOn(!playerEffectOn)
+    }
 
     return (
         <>
@@ -57,9 +69,16 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClic
                         :
                         <p className="dino-danger" id="danger_rating" onClick={handleClick}>Danger rating:  {selectedCard.danger_rating}</p>
                         }
-                        <div className="playerAudio">
-                          <ReactAudioPlayer src={require("../Audio/" + selectedCard.sound)} controls volume={0.4} controlsList="nodownload noplaybackrate"/>
+
+                        <div className="playersoundbutton">
+                            <button
+                            onClick={togglePlayDinoPlayer}>
+                                 &#129430;
+                                <audio src={require("../Audio/" + selectedCard.sound)} ref={playerAudioElement}></audio>
+
+                            </button>
                         </div>
+
                     </div>
 
                 </div>
