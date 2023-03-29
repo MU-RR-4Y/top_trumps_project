@@ -220,6 +220,7 @@
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {  
   background-color: #000000;
+  box-shadow: 10px 10px 10px #0000008d;
 }
 
 /* Style the back side */
