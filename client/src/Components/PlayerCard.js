@@ -75,7 +75,6 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClic
                             onClick={togglePlayDinoPlayer}>
                                  &#129430;
                                 <audio src={require("../Audio/" + selectedCard.sound)} ref={playerAudioElement}></audio>
-
                             </button>
                         </div>
 
