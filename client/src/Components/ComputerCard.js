@@ -32,7 +32,9 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                         <p className="dino-age">Age:  {mapArray[0].age} million years</p>
                                         <p className="dino-intelligence">Intelligence:  {mapArray[0].intelligence}</p>
                                         <p className="dino-danger">Danger rating:  {mapArray[0].danger_rating}</p>
+                                        <div className="playerAudio">
                                         <ReactAudioPlayer src={require("../Audio/" + mapArray[0].sound)} controls volume={0.4} controlsList="nodownload noplaybackrate" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
