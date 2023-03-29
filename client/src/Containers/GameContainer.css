@@ -16,6 +16,7 @@
     border: 3px solid green;
     color: white;
     border-radius: 25px;
+    text-shadow: 1px 1px green;
 }
 
 .player-name p {
@@ -24,6 +25,7 @@
     font-size: 4rem;
     margin-top: 0;
     margin-bottom: 10px;
+    text-shadow: 2px 2px #bcaa94;
 }
 
 .player-card {
@@ -46,6 +48,7 @@
     border: 3px solid green;
     border-radius: 25px;
     margin-top: 700px;
+    text-shadow: 1px 1px green;
 }
 
 .draw-pile>p {
