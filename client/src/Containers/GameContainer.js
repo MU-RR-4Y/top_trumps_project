@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import PlayerCard from "../Components/PlayerCard";
 import ComputerCard from "../Components/ComputerCard";
 import { getDinosaurs } from "../Services/GameService";
-
 import sound from "../Audio/Jurassic_Park_Theme_Song.mp3";
 import "./GameContainer.css";
 import "./AudioControl.css";
