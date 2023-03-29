@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PlayerCard from "../Components/PlayerCard";
 import ComputerCard from "../Components/ComputerCard";
 import { getDinosaurs } from "../Services/GameService";
 import ReactAudioPlayer from "react-audio-player";
+import sound from "../Audio/Jurassic_Park_Theme_Song.mp3";
 import "./GameContainer.css";
 import "./AudioControl.css";
 
@@ -17,6 +18,7 @@ const GameContainer = ({ playerName }) => {
     const [resultMessage, setResultMessage] = useState('');
     const [flipActive,SetFlipActive] = useState(false);
     const [clicked, setClicked]= useState(false);
+    const [audioOn, setaudioOn] = useState(true);
 
     const shuffle = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
@@ -25,6 +27,27 @@ const GameContainer = ({ playerName }) => {
         }
         return cards;
     };
+
+    const audioElement= useRef(new Audio(sound))
+
+    // function play () {
+    //     audioElement.current.play()
+    //     audioElement.current.volume="0.1"
+    // }
+
+    // function pause(){
+    //     audioElement.current.pause()
+    // }
+
+    useEffect (()=>{
+        audioElement.current.volume="0.1"
+        audioOn ? audioElement.current.play() : audioElement.current.pause()
+        
+    },[audioOn, []]);
+
+    const togglePlay = () => {
+        setaudioOn(!audioOn)
+    }
 
 
     //handleCardFlip
@@ -155,9 +178,26 @@ const GameContainer = ({ playerName }) => {
 
     return (
         <>
-            <div className="audio-container">
+            {/* <div className="audio-container">
                 <ReactAudioPlayer src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} controls volume={0.05} controlsList="nodownload noplaybackrate" loop />
+            </div> */}
+
+            <div className="testAudio">
+                { audioOn ?
+                <button
+                onClick={togglePlay}>
+                    &#9209;
+                </button>
+
+                    :
+
+                <button
+                onClick={togglePlay}>
+                    &#x25B6;
+                </button>
+                }
             </div>
+
             <div className="cards-display">
                 <div className="player-card">
                     <div className="player-name">
