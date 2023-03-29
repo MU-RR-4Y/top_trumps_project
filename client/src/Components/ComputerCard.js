@@ -10,7 +10,7 @@ const ComputerCard = ({ cpu, flipActive }) => {
         <div className="flip-card">
                 <div className= {`flip-card-inner ${flipActive? 'is-flipped' : null }`}>
                     <div className={'flip-card-front'}>
-                           <img src={require('../Images/_Logo.jpg')} height="680" width="400" className="styled-flip"  alt="" class="center" style={{ objectFit: "contain" }}/>
+                           <img src={require('../Images/_Logo.jpg')} height="680" width="400" className="styled-flip" alt="" style={{ objectFit: "contain" }}/>
                     </div>
                         <div className="flip-card-back">
                             <div className="card-border">
