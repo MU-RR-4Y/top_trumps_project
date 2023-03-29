@@ -49,7 +49,7 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                         <div className="computersoundbutton">
                                             <button
                                             onClick={togglePlayDinoComputer}>
-                                                &#129430;
+                                                🦖
                                                 <audio src={require("../Audio/" + mapArray[0].sound)} ref={computerAudioElement}></audio>
                                             </button>
                                         </div>
