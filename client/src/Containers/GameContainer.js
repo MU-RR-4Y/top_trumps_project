@@ -17,9 +17,11 @@ const GameContainer = ({ playerName }) => {
     const [result, setResult] = useState(null);
     const [gameUpdate, setGameUpdate] = useState(false);
     const [resultMessage, setResultMessage] = useState('');
-    const [flipActive,SetFlipActive] = useState(false);
+    const [flipActive,setFlipActive] = useState(false);
     const [clicked, setClicked]= useState(false);
     const [audioOn, setaudioOn] = useState(true);
+    const [playerGameWin, setPlayerGameWin] = useState(false);
+    const [cpuGameWin, setCPUGameWin] = useState(false);
 
     const shuffle = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
@@ -44,11 +46,18 @@ const GameContainer = ({ playerName }) => {
         setaudioOn(!audioOn)
     }
 
-
+    //Check score for win condition
+    const checkScore=()=>{
+       if(player.length >19){
+        setPlayerGameWin(true)
+       } 
+       if(cpu.length>19) {setCPUGameWin(true)}
+    }
+       
     //handleCardFlip
 
     const handleCardFlip = () => {
-        SetFlipActive(!flipActive);
+        setFlipActive(!flipActive);
 
     }
 
@@ -81,7 +90,6 @@ const GameContainer = ({ playerName }) => {
     const cpuWin = () => {
         handleCardFlip()
         setTimeout(() => {
-
             const newCPU = [...cpu];
             const cpuWin = newCPU.concat(middle);
             cpuWin.shift(); // remove index [0] of cpuhand
@@ -92,13 +100,11 @@ const GameContainer = ({ playerName }) => {
             setClicked(false);
         }, 800);
         setMiddle([]);
-
     };
 
     const draw = () => {
         handleCardFlip()
         setTimeout(() => {
-
             const newCPU = [...cpu];
             newCPU.shift();
             setCPU(newCPU);
@@ -107,7 +113,6 @@ const GameContainer = ({ playerName }) => {
             setPlayer(newPlayer);
         }, 800);
         setClicked(false);
-
     }
 
     //resolve game function
@@ -126,8 +131,7 @@ const GameContainer = ({ playerName }) => {
             draw();
         }
         setResult('')
-
-    }
+     }
 
     //Comparison function
     const compareAttribute = (attribute) => {
@@ -158,6 +162,29 @@ const GameContainer = ({ playerName }) => {
             });
     }
 
+    //reset game function
+
+    const resetGame =()=>{
+        getDinosaurs()
+        .then((data) => {
+            const playerHand = data;
+            shuffle(playerHand);
+            const cpuHand = playerHand.splice(0, 15);
+            setPlayer(playerHand);
+            setCPU(cpuHand);
+        });
+        setMiddle([]);
+        setResult(null);
+        setGameUpdate(false);
+        setResultMessage('');
+        setFlipActive(false);
+        setClicked(false);
+        setaudioOn(true);
+        setPlayerGameWin(false);
+        setCPUGameWin(false);
+        }
+
+   
 
     //initial fectch request
     useEffect(() => {
@@ -176,8 +203,36 @@ const GameContainer = ({ playerName }) => {
         resolveGame(result);
     }, [gameUpdate]);
 
-    if (!player.length || !cpu.length) return null;
+    useEffect(()=>{
+        checkScore()
+    },player)
 
+   
+  
+    if (!player.length || !cpu.length) {return null;}
+    else if (playerGameWin){
+        return(
+            <div className='winMessage'>
+                <div>
+                <h1>{`${playerName} wins the game!!`}</h1>
+                <button onClick={resetGame}>Play Again</button>
+                </div>
+            </div>
+        )
+    }
+    else if (cpuGameWin){
+        return(
+            <div className='winMessage'>
+                <div>
+                <h1>CPU wins the game!!</h1>
+                <button onClick={resetGame}>Play Again</button>
+                </div>
+            </div>
+        )
+    }
+
+
+    else{
 
     return (
         <>
@@ -195,8 +250,9 @@ const GameContainer = ({ playerName }) => {
                   Toggle audio:  ▶️
                 </button>
                 }
-                <button onClick={testToastify}>toastify</button>
+                
             </div>
+            
 
             <div className="cards-display">
                 <div className="player-card">
@@ -236,6 +292,7 @@ const GameContainer = ({ playerName }) => {
             theme="light"/>
         </>
     );
+}
 
 
 
