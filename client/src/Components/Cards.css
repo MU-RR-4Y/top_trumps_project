@@ -26,7 +26,7 @@
 }
 
 .dino-name {
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: bold;
   margin: 0;
   margin-top: 10px;
@@ -34,7 +34,7 @@
 }
 
 .dino-info {
-  font-size: 0.75em;
+  font-size: 0.85em;
   font-style: italic;
   margin: 0;
   height: 70px;
@@ -47,8 +47,11 @@
 .dino-weight {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
 }
 
@@ -65,8 +68,11 @@
 .dino-height {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
 }
 
@@ -83,8 +89,11 @@
 .dino-length {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
 }
 
@@ -101,8 +110,11 @@
 .dino-age {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
 }
 
@@ -119,8 +131,11 @@
 .dino-intelligence {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
 }
 
@@ -137,8 +152,11 @@
 .dino-danger {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 20px;
+  margin-top: 0;
   border: 0.1em solid black;
 }
 

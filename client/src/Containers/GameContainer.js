@@ -15,7 +15,6 @@ const GameContainer = ({ playerName }) => {
     const [result, setResult] = useState(null);
     const [gameUpdate, setGameUpdate] = useState(false);
     const [resultMessage, setResultMessage] = useState('');
-    const [cpuCardVisible, setCpuCardVisible] = useState(false);
     const [flipActive,SetFlipActive] = useState(false);
     const [clicked, setClicked]= useState(false);
 
