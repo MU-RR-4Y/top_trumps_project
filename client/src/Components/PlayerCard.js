@@ -21,7 +21,7 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClic
                     <div className="card-front">
                         <div className="card-image">
                             <img src={require("../Images/" + selectedCard.image)} alt=""
-                                height="200" width="380" class="center" style={{ objectFit: "contain" }} />
+                                height="200" width="380" style={{ objectFit: "contain" }} />
                         </div>
                         <p className="dino-name">
                             {selectedCard.name}{selectedCard.diet == "Herbivore" ? " 🥬" : " 🥩"}
