@@ -48,9 +48,7 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                         <p className="dino-danger">Danger rating:  {mapArray[0].danger_rating}</p>
                                         <div className="playersoundbutton">
                                             <button onClick={togglePlayDinoComputer}>
-                                                <div className="dinobutton">
-                                                    🦖
-                                                </div>
+                                                <span className="dinobutton">▶🦖</span>
                                                 <audio src={require("../Audio/" + mapArray[0].sound)} ref={computerAudioElement}></audio>
                                             </button>
                                         </div>

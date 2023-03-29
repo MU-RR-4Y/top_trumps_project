@@ -194,9 +194,9 @@ const GameContainer = ({ playerName }) => {
                 <div className="middle-panel">
                     <div className="testAudio">
                         {audioOn ?
-                            <button onClick={togglePlay}>&#9208;</button>
+                            <button onClick={togglePlay}>▐▐</button>
                             :
-                            <button onClick={togglePlay}>▶️</button>
+                            <button onClick={togglePlay}>▶</button>
                         }
                     </div>
                     <div className="draw-pile">
