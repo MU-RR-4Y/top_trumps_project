@@ -37,7 +37,7 @@
   font-size: 0.85em;
   font-style: italic;
   margin: 0;
-  height: 70px;
+  height: 85px;
   padding: 10px 20px 10px 20px;
   display: flex;
   justify-content: center;
@@ -55,16 +55,6 @@
   border: 0.1em solid black;
 }
 
-.dino-weight:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
-}
-
 .dino-height {
   transition: color 0.3s, transform 1s;
   text-align: center;
@@ -74,16 +64,6 @@
   margin-bottom: 10px;
   margin-top: 0;
   border: 0.1em solid black;
-}
-
-.dino-height:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
 }
 
 .dino-length {
@@ -97,16 +77,6 @@
   border: 0.1em solid black;
 }
 
-.dino-length:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
-}
-
 .dino-age {
   transition: color 0.3s, transform 1s;
   text-align: center;
@@ -116,16 +86,6 @@
   margin-bottom: 10px;
   margin-top: 0;
   border: 0.1em solid black;
-}
-
-.dino-age:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
 }
 
 .dino-intelligence {
@@ -139,28 +99,18 @@
   border: 0.1em solid black;
 }
 
-.dino-intelligence:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
-}
-
 .dino-danger {
   transition: color 0.3s, transform 1s;
   text-align: center;
   font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 0;
   border: 0.1em solid black;
 }
 
-.dino-danger:hover {
+.player-selection:hover {
   cursor: pointer;
   color: rgb(174, 255, 0);
   animation-name: hoverAnimation;
