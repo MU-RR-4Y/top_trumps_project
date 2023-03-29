@@ -11,7 +11,7 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClic
     const handleClick = (e) => {
         setClicked(true)
         handleCardFlip()
-        setTimeout(()=>(compareAttribute(e.target.id)),3000)
+        setTimeout(()=>(compareAttribute(e.target.id)),6000)
     };
 
     return (
