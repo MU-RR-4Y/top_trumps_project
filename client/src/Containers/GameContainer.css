@@ -61,3 +61,27 @@
     flex-direction: column;
     align-items: center;
 }
+
+.winMessage{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+} 
+
+.winMessage div{
+    background-image: linear-gradient(to bottom right, green, rgb(194, 253, 68), green);
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px #0000008d;
+}
+
+.winMessage h1{
+    background: black;
+    color: white;
+    text-shadow: 2px 2px #bcaa94;
+    font-size: 4rem;
+    background: black;
+    padding: 2rem;
+    border-radius: 25px;
+    margin: 10px;
+}
