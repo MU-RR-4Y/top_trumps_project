@@ -122,7 +122,6 @@ const GameContainer = ({ playerName }) => {
             setResult('draw')
             setGameUpdate(!gameUpdate)
         }
-        setCpuCardVisible(true);
     };
 
     //initial fectch request
