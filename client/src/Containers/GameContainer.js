@@ -98,12 +98,15 @@ const GameContainer = ({ playerName }) => {
     const resolveGame = (result) => {
         if (result === 'player') {
             setResultMessage('Player wins!!');
+            testToastify(`${playerName} wins the hand`);
             playerWin();
         } else if (result === 'cpu') {
             setResultMessage('CPU wins!!!');
+            testToastify('CPU wins the hand');
             cpuWin();
         } else if (result === 'draw') {
             setResultMessage('Draw');
+            testToastify("It's a draw");
             draw();
         }
         setResult('')
@@ -126,9 +129,19 @@ const GameContainer = ({ playerName }) => {
         }
     };
 
-    const testToastify=()=>{
-        toast ('hello from Toastify')
+    const testToastify=(message)=>{
+        toast.success(message, {
+            position: "bottom-center",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
     }
+
 
     //initial fectch request
     useEffect(() => {
@@ -190,7 +203,17 @@ const GameContainer = ({ playerName }) => {
                     </div>
                 </div>
             </div>
-            <ToastContainer/>
+            <ToastContainer
+            position="bottom-center"
+            autoClose={4000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"/>
         </>
     );
 
