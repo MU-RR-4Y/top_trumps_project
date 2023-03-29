@@ -124,12 +124,20 @@
 .playersoundbutton{
   display: flex;
   justify-content: center;
+  background-color: black;
+}
+
+.playersoundbutton > button {
+  background-color: black;
+  padding: 0;
+  outline: none;
 }
 
 .dinobutton {
   font-size:2.5rem;
   width:100%;
-  text-align:center
+  text-align:center;
+  background-color: black;
 }
 
 

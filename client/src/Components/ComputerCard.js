@@ -46,11 +46,10 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                         <p className="dino-age">Age:  {mapArray[0].age} million years</p>
                                         <p className="dino-intelligence">Intelligence:  {mapArray[0].intelligence}</p>
                                         <p className="dino-danger">Danger rating:  {mapArray[0].danger_rating}</p>
-                                        <div className="computersoundbutton">
-                                            <button
-                                            onClick={togglePlayDinoComputer}>
-                                                 <div className="dinobutton">
-                                                🦖
+                                        <div className="playersoundbutton">
+                                            <button onClick={togglePlayDinoComputer}>
+                                                <div className="dinobutton">
+                                                    🦖
                                                 </div>
                                                 <audio src={require("../Audio/" + mapArray[0].sound)} ref={computerAudioElement}></audio>
                                             </button>

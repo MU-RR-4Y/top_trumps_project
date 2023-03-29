@@ -17,8 +17,8 @@ const GameContainer = ({ playerName }) => {
     const [result, setResult] = useState(null);
     const [gameUpdate, setGameUpdate] = useState(false);
     const [resultMessage, setResultMessage] = useState('');
-    const [flipActive,SetFlipActive] = useState(false);
-    const [clicked, setClicked]= useState(false);
+    const [flipActive, SetFlipActive] = useState(false);
+    const [clicked, setClicked] = useState(false);
     const [audioOn, setaudioOn] = useState(true);
 
     const shuffle = (cards) => {
@@ -29,16 +29,16 @@ const GameContainer = ({ playerName }) => {
         return cards;
     };
 
-    const audioElement= useRef(new Audio(sound))
+    const audioElement = useRef(new Audio(sound))
 
-   
 
-    useEffect (()=>{
-        audioElement.current.volume="0.1"
-        audioElement.current.loop="true"
+
+    useEffect(() => {
+        audioElement.current.volume = "0.1"
+        audioElement.current.loop = "true"
         audioOn ? audioElement.current.play() : audioElement.current.pause()
-        
-    },[audioOn, []]);
+
+    }, [audioOn, []]);
 
     const togglePlay = () => {
         setaudioOn(!audioOn)
@@ -145,7 +145,7 @@ const GameContainer = ({ playerName }) => {
         }
     };
 
-    const testToastify=(message)=>{
+    const testToastify = (message) => {
         toast.success(message, {
             position: "bottom-center",
             autoClose: 4000,
@@ -155,7 +155,7 @@ const GameContainer = ({ playerName }) => {
             draggable: true,
             progress: undefined,
             theme: "colored",
-            });
+        });
     }
 
 
@@ -181,23 +181,6 @@ const GameContainer = ({ playerName }) => {
 
     return (
         <>
-            <div className="testAudio">
-                { audioOn ?
-                <button
-                onClick={togglePlay}>
-                   Toggle audio: &#9208;
-                </button>
-
-                    :
-
-                <button
-                onClick={togglePlay}>
-                  Toggle audio:  ▶️
-                </button>
-                }
-                <button onClick={testToastify}>toastify</button>
-            </div>
-
             <div className="cards-display">
                 <div className="player-card">
                     <div className="player-name">
@@ -209,6 +192,13 @@ const GameContainer = ({ playerName }) => {
                     </div>
                 </div>
                 <div className="middle-panel">
+                    <div className="testAudio">
+                        {audioOn ?
+                            <button onClick={togglePlay}>&#9208;</button>
+                            :
+                            <button onClick={togglePlay}>▶️</button>
+                        }
+                    </div>
                     <div className="draw-pile">
                         <p>DRAW PILE: {middle.length}</p>
                     </div>
@@ -224,16 +214,17 @@ const GameContainer = ({ playerName }) => {
                 </div>
             </div>
             <ToastContainer
-            position="bottom-center"
-            autoClose={4000}
-            hideProgressBar
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="light"/>
+                position="bottom-center"
+                autoClose={4000}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </>
     );
 
