@@ -49,7 +49,9 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                         <div className="computersoundbutton">
                                             <button
                                             onClick={togglePlayDinoComputer}>
+                                                 <div className="dinobutton">
                                                 🦖
+                                                </div>
                                                 <audio src={require("../Audio/" + mapArray[0].sound)} ref={computerAudioElement}></audio>
                                             </button>
                                         </div>
