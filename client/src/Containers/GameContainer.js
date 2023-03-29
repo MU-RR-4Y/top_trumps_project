@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PlayerCard from "../Components/PlayerCard";
 import ComputerCard from "../Components/ComputerCard";
 import { getDinosaurs } from "../Services/GameService";
 import ReactAudioPlayer from "react-audio-player";
+import sound from "../Audio/Jurassic_Park_Theme_Song.mp3";
 import "./GameContainer.css";
 import "./AudioControl.css";
 import { ToastContainer, toast } from 'react-toastify';
@@ -19,6 +20,7 @@ const GameContainer = ({ playerName }) => {
     const [resultMessage, setResultMessage] = useState('');
     const [flipActive,SetFlipActive] = useState(false);
     const [clicked, setClicked]= useState(false);
+    const [audioOn, setaudioOn] = useState(true);
 
     const shuffle = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
@@ -27,6 +29,21 @@ const GameContainer = ({ playerName }) => {
         }
         return cards;
     };
+
+    const audioElement= useRef(new Audio(sound))
+
+   
+
+    useEffect (()=>{
+        audioElement.current.volume="0.1"
+        audioElement.current.loop="true"
+        audioOn ? audioElement.current.play() : audioElement.current.pause()
+        
+    },[audioOn, []]);
+
+    const togglePlay = () => {
+        setaudioOn(!audioOn)
+    }
 
 
     //handleCardFlip
@@ -163,21 +180,25 @@ const GameContainer = ({ playerName }) => {
     if (!player.length || !cpu.length) return null;
 
 
-    // // limits audio volume to 20%
-    // // works if page loaded then code applied - breaks app if refreshed
-
-    // const audio = document.getElementById("theme-audio")
-    // function setVolume(){
-    //     audio.volume = 0.2
-    //     }
-    // setVolume()
-
     return (
         <>
-            <div className="audio-container">
-                <ReactAudioPlayer src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} controls volume={0.05} controlsList="nodownload noplaybackrate" loop />
+            <div className="testAudio">
+                { audioOn ?
+                <button
+                onClick={togglePlay}>
+                    &#9209;
+                </button>
+
+                    :
+
+                <button
+                onClick={togglePlay}>
+                    &#x25B6;
+                </button>
+                }
                 <button onClick={testToastify}>toastify</button>
             </div>
+
             <div className="cards-display">
                 <div className="player-card">
                     <div className="player-name">

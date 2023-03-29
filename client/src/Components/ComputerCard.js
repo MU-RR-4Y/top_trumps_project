@@ -1,9 +1,23 @@
-import React from "react";
+import React, {useState, useEffect, useRef} from "react";
 import "./Cards.css";
-import ReactAudioPlayer from "react-audio-player";
 
 const ComputerCard = ({ cpu, flipActive }) => {
+    const [cpuEffectOn, setcpuEffectOn] = useState(false);
     const mapArray = cpu.map((item) => { return item });
+
+    const computerAudioElement = useRef(null)
+
+    useEffect (()=>{
+        computerAudioElement.current.volume="0.4"
+        computerAudioElement ? computerAudioElement.current.play() : computerAudioElement.current.pause()
+
+    },[cpuEffectOn]);
+
+    const togglePlayDinoComputer = () => {
+        setcpuEffectOn(!cpuEffectOn)
+    };
+
+    
 
     return (
         <>
@@ -39,9 +53,8 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                </div>
             </div>
-      
         </>
     );
 };
