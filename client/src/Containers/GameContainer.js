@@ -30,14 +30,7 @@ const GameContainer = ({ playerName }) => {
 
     const audioElement= useRef(new Audio(sound))
 
-    // function play () {
-    //     audioElement.current.play()
-    //     audioElement.current.volume="0.1"
-    // }
-
-    // function pause(){
-    //     audioElement.current.pause()
-    // }
+   
 
     useEffect (()=>{
         audioElement.current.volume="0.1"
@@ -166,15 +159,6 @@ const GameContainer = ({ playerName }) => {
 
     if (!player.length || !cpu.length) return null;
 
-
-    // // limits audio volume to 20%
-    // // works if page loaded then code applied - breaks app if refreshed
-
-    // const audio = document.getElementById("theme-audio")
-    // function setVolume(){
-    //     audio.volume = 0.2
-    //     }
-    // setVolume()
 
     return (
         <>
