@@ -5,6 +5,8 @@ import { getDinosaurs } from "../Services/GameService";
 import ReactAudioPlayer from "react-audio-player";
 import "./GameContainer.css";
 import "./AudioControl.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const GameContainer = ({ playerName }) => {
@@ -124,6 +126,10 @@ const GameContainer = ({ playerName }) => {
         }
     };
 
+    const testToastify=()=>{
+        toast ('hello from Toastify')
+    }
+
     //initial fectch request
     useEffect(() => {
         getDinosaurs()
@@ -157,6 +163,7 @@ const GameContainer = ({ playerName }) => {
         <>
             <div className="audio-container">
                 <ReactAudioPlayer src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} controls volume={0.05} controlsList="nodownload noplaybackrate" loop />
+                <button onClick={testToastify}>toastify</button>
             </div>
             <div className="cards-display">
                 <div className="player-card">
@@ -183,6 +190,7 @@ const GameContainer = ({ playerName }) => {
                     </div>
                 </div>
             </div>
+            <ToastContainer/>
         </>
     );
 
