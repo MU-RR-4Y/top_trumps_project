@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
 import "./Cards.css";
-import ReactAudioPlayer from "react-audio-player";
 
 const ComputerCard = ({ cpu, flipActive }) => {
     const [cpuEffectOn, setcpuEffectOn] = useState(false);
