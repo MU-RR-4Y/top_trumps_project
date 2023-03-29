@@ -18,7 +18,7 @@ const GameContainer = ({ playerName }) => {
     const [result, setResult] = useState(null);
     const [gameUpdate, setGameUpdate] = useState(false);
     const [resultMessage, setResultMessage] = useState('');
-    const [flipActive,SetFlipActive] = useState(false);
+    const [flipActive,setFlipActive] = useState(false);
     const [clicked, setClicked]= useState(false);
     const [audioOn, setaudioOn] = useState(true);
     const [playerGameWin, setPlayerGameWin] = useState(false);
@@ -58,7 +58,7 @@ const GameContainer = ({ playerName }) => {
     //handleCardFlip
 
     const handleCardFlip = () => {
-        SetFlipActive(!flipActive);
+        setFlipActive(!flipActive);
 
     }
 
@@ -163,6 +163,28 @@ const GameContainer = ({ playerName }) => {
             });
     }
 
+    //reset game function
+
+    const resetGame =()=>{
+        getDinosaurs()
+        .then((data) => {
+            const playerHand = data;
+            shuffle(playerHand);
+            const cpuHand = playerHand.splice(0, 15);
+            setPlayer(playerHand);
+            setCPU(cpuHand);
+        });
+        setMiddle([]);
+        setResult(null);
+        setGameUpdate(false);
+        setResultMessage('');
+        setFlipActive(false);
+        setClicked(false);
+        setaudioOn(true);
+        setPlayerGameWin(false);
+        setCPUGameWin(false);
+        }
+
    
 
     //initial fectch request
@@ -194,6 +216,7 @@ const GameContainer = ({ playerName }) => {
             <div className='winMessage'>
                 <div>
                 <h1>{`${playerName} wins the game!!`}</h1>
+                <button onClick={resetGame}>Play Again</button>
                 </div>
             </div>
         )
@@ -203,6 +226,7 @@ const GameContainer = ({ playerName }) => {
             <div className='winMessage'>
                 <div>
                 <h1>CPU wins the game!!</h1>
+                <button onClick={resetGame}>Play Again</button>
                 </div>
             </div>
         )
