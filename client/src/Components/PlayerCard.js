@@ -26,15 +26,12 @@ const PlayerCard = ({ player, compareAttribute,handleCardFlip, clicked , setClic
                         <p className="dino-name">
                             {selectedCard.name}{selectedCard.diet == "Herbivore" ? " 🥬" : " 🥩"}
                         </p>
-                    
-                        <p className="dino-info">{selectedCard.description}</p>
-
+                        <p className="dino-info" align="justify">{selectedCard.description}</p>
                         {clicked?
                         <p className="dino-weight" id="weight" >Weight:  {selectedCard.weight.toLocaleString()} lbs</p>
                         :
                         <p className="dino-weight" id="weight" onClick={handleClick}>Weight:  {selectedCard.weight.toLocaleString()} lbs</p>
                         }
-
                         {clicked?
                         <p className="dino-height" id="height" >Height:  {selectedCard.height} ft</p>
                         :
