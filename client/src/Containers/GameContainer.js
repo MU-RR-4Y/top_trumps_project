@@ -6,6 +6,8 @@ import ReactAudioPlayer from "react-audio-player";
 import sound from "../Audio/Jurassic_Park_Theme_Song.mp3";
 import "./GameContainer.css";
 import "./AudioControl.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const GameContainer = ({ playerName }) => {
@@ -113,12 +115,15 @@ const GameContainer = ({ playerName }) => {
     const resolveGame = (result) => {
         if (result === 'player') {
             setResultMessage('Player wins!!');
+            testToastify(`${playerName} wins the hand`);
             playerWin();
         } else if (result === 'cpu') {
             setResultMessage('CPU wins!!!');
+            testToastify('CPU wins the hand');
             cpuWin();
         } else if (result === 'draw') {
             setResultMessage('Draw');
+            testToastify("It's a draw");
             draw();
         }
         setResult('')
@@ -140,6 +145,20 @@ const GameContainer = ({ playerName }) => {
             setGameUpdate(!gameUpdate)
         }
     };
+
+    const testToastify=(message)=>{
+        toast.success(message, {
+            position: "bottom-center",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    }
+
 
     //initial fectch request
     useEffect(() => {
@@ -163,10 +182,6 @@ const GameContainer = ({ playerName }) => {
 
     return (
         <>
-            {/* <div className="audio-container">
-                <ReactAudioPlayer src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} controls volume={0.05} controlsList="nodownload noplaybackrate" loop />
-            </div> */}
-
             <div className="testAudio">
                 { audioOn ?
                 <button
@@ -181,6 +196,7 @@ const GameContainer = ({ playerName }) => {
                     &#x25B6;
                 </button>
                 }
+                <button onClick={testToastify}>toastify</button>
             </div>
 
             <div className="cards-display">
@@ -208,6 +224,17 @@ const GameContainer = ({ playerName }) => {
                     </div>
                 </div>
             </div>
+            <ToastContainer
+            position="bottom-center"
+            autoClose={4000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"/>
         </>
     );
 
