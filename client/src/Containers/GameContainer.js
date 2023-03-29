@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import PlayerCard from "../Components/PlayerCard";
 import ComputerCard from "../Components/ComputerCard";
 import { getDinosaurs } from "../Services/GameService";
-import ReactAudioPlayer from "react-audio-player";
 import sound from "../Audio/Jurassic_Park_Theme_Song.mp3";
 import "./GameContainer.css";
 import "./AudioControl.css";
@@ -186,14 +185,14 @@ const GameContainer = ({ playerName }) => {
                 { audioOn ?
                 <button
                 onClick={togglePlay}>
-                    &#9209;
+                   Toggle audio: &#9208;
                 </button>
 
                     :
 
                 <button
                 onClick={togglePlay}>
-                    &#x25B6;
+                  Toggle audio:  ▶️
                 </button>
                 }
                 <button onClick={testToastify}>toastify</button>
