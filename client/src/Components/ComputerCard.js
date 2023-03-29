@@ -22,8 +22,8 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                     <p className="dino-name">
                                         {mapArray[0].name}{mapArray[0].diet == "Herbivore" ? " 🥬" : " 🥩"}
                                     </p>
-                                    <div className="dino-info">
-                                        <p align="justify">{mapArray[0].description}</p>
+                                    <div className="dino-info" align="center">
+                                        <p>{mapArray[0].description}</p>
                                     </div>
                                     <div className="dino-stats">
                                         <p className="dino-weight">Weight:  {mapArray[0].weight.toLocaleString()} lbs</p>
