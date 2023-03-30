@@ -118,18 +118,33 @@
   animation-timing-function: ease;
   border: 0.1em solid;
   border-radius: 10px;
-
 }
 
 .playersoundbutton{
   display: flex;
   justify-content: center;
+  background-color: black;
+}
+
+.playersoundbutton > button {
+  background-color: black;
+  padding: 0;
+  outline: none;
+  width: 120px;
+  border-radius: 20px;
 }
 
 .dinobutton {
-  font-size:2.5rem;
-  width:100%;
-  text-align:center
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: center;
+  color: green;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.playersoundbutton > button:hover {
+  cursor: pointer;
 }
 
 

@@ -47,7 +47,7 @@
     background-color: rgba(0, 128, 0, 0.383);
     border: 3px solid green;
     border-radius: 25px;
-    margin-top: 780px;
+    margin-top: 400px;
     text-shadow: 1px 1px green;
 }
 
@@ -56,9 +56,9 @@
     color: white;
 }
 
-.audio-container {
+.middle-panel {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -67,7 +67,6 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    
 } 
 
 .winMessage div{

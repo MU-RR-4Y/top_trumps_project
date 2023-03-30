@@ -36,4 +36,33 @@ audio::-webkit-media-controls-volume-slider {
 audio::-webkit-media-controls-mute-button { 
   display: none !important; 
 }
+
+.testAudio {
+  display: flex;
+  align-items: center;
+}
   
+.testAudio > button {
+  margin-top: 20px;
+  width: 75px;
+  height: 50px;
+  background-image: linear-gradient(green, rgb(194, 253, 68), green);
+  border-radius: 100px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+}
+
+.pause-button {
+  padding: 5px 22px 7px 18px;
+  font-size: 20px;
+}
+
+.play-button {
+  padding: 4px 18px 4px 22px;
+  font-size: 35px;
+}
