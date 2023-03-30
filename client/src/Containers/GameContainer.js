@@ -214,8 +214,8 @@ const GameContainer = ({ playerName }) => {
         return(
             <div className='winMessage'>
                 <div>
-                <h1>{`${playerName} wins the game!!`}</h1>
-                <button onClick={resetGame}>Play Again</button>
+                    <h1>{`${playerName} wins the game!!`}</h1>
+                    <button className="reset-game" onClick={resetGame}>Play Again</button>
                 </div>
             </div>
         )
@@ -224,8 +224,8 @@ const GameContainer = ({ playerName }) => {
         return(
             <div className='winMessage'>
                 <div>
-                <h1>CPU wins the game!!</h1>
-                <button onClick={resetGame}>Play Again</button>
+                    <h1>CPU wins the game!!</h1>
+                    <button className="reset-game" onClick={resetGame}>Play Again</button>
                 </div>
             </div>
         )
