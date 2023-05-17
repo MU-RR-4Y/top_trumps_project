@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PlayerCard from "../Components/PlayerCard";
 import ComputerCard from "../Components/ComputerCard";
 import { getDinosaurs } from "../Services/GameService";
-import ReactAudioPlayer from "react-audio-player";
+import sound from "../Audio/Jurassic_Park_Theme_Song.mp3";
 import "./GameContainer.css";
 import "./AudioControl.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const GameContainer = ({ playerName }) => {
@@ -15,9 +17,11 @@ const GameContainer = ({ playerName }) => {
     const [result, setResult] = useState(null);
     const [gameUpdate, setGameUpdate] = useState(false);
     const [resultMessage, setResultMessage] = useState('');
-    const [cpuCardVisible, setCpuCardVisible] = useState(false);
-    const [flipActive, SetFlipActive] = useState(false)
-
+    const [flipActive, setFlipActive] = useState(false);
+    const [clicked, setClicked] = useState(false);
+    const [audioOn, setaudioOn] = useState(true);
+    const [playerGameWin, setPlayerGameWin] = useState(false);
+    const [cpuGameWin, setCPUGameWin] = useState(false);
 
     const shuffle = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
@@ -27,11 +31,33 @@ const GameContainer = ({ playerName }) => {
         return cards;
     };
 
+    const audioElement = useRef(new Audio(sound))
 
+
+
+    useEffect(() => {
+        audioElement.current.volume = "0.1"
+        audioElement.current.loop = "true"
+        audioOn ? audioElement.current.play() : audioElement.current.pause()
+
+    }, [audioOn, []]);
+
+    const togglePlay = () => {
+        setaudioOn(!audioOn)
+    }
+
+    //Check score for win condition
+    const checkScore=()=>{
+       if(player.length >19){
+        setPlayerGameWin(true)
+       } 
+       if(cpu.length>19) {setCPUGameWin(true)}
+    }
+       
     //handleCardFlip
 
     const handleCardFlip = () => {
-        SetFlipActive(!flipActive);
+        setFlipActive(!flipActive);
 
     }
 
@@ -56,14 +82,14 @@ const GameContainer = ({ playerName }) => {
             newCPU.shift(); // remove index [0] of cpuhand
             setPlayer(playerWin);
             setCPU(newCPU);
-            setMiddle([]);
+            setClicked(false);
         }, 800);
+        setMiddle([]);
     };
 
     const cpuWin = () => {
         handleCardFlip()
         setTimeout(() => {
-
             const newCPU = [...cpu];
             const cpuWin = newCPU.concat(middle);
             cpuWin.shift(); // remove index [0] of cpuhand
@@ -71,15 +97,14 @@ const GameContainer = ({ playerName }) => {
             newPlayer.shift(); // remove index [0] of playerhand
             setCPU(cpuWin);
             setPlayer(newPlayer);
-            setMiddle([]);
+            setClicked(false);
         }, 800);
-
+        setMiddle([]);
     };
 
     const draw = () => {
         handleCardFlip()
         setTimeout(() => {
-
             const newCPU = [...cpu];
             newCPU.shift();
             setCPU(newCPU);
@@ -87,24 +112,26 @@ const GameContainer = ({ playerName }) => {
             newPlayer.shift();
             setPlayer(newPlayer);
         }, 800);
-
+        setClicked(false);
     }
 
     //resolve game function
     const resolveGame = (result) => {
         if (result === 'player') {
             setResultMessage('Player wins!!');
+            testToastify(`${playerName} wins the hand`);
             playerWin();
         } else if (result === 'cpu') {
             setResultMessage('CPU wins!!!');
+            testToastify('CPU wins the hand');
             cpuWin();
         } else if (result === 'draw') {
             setResultMessage('Draw');
+            testToastify("It's a draw");
             draw();
         }
         setResult('')
-
-    }
+     }
 
     //Comparison function
     const compareAttribute = (attribute) => {
@@ -120,8 +147,44 @@ const GameContainer = ({ playerName }) => {
             setResult('draw')
             setGameUpdate(!gameUpdate)
         }
-        setCpuCardVisible(true);
     };
+
+    const testToastify = (message) => {
+        toast.success(message, {
+            position: "bottom-center",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    }
+
+    //reset game function
+
+    const resetGame =()=>{
+        getDinosaurs()
+        .then((data) => {
+            const playerHand = data;
+            shuffle(playerHand);
+            const cpuHand = playerHand.splice(0, 15);
+            setPlayer(playerHand);
+            setCPU(cpuHand);
+        });
+        setMiddle([]);
+        setResult(null);
+        setGameUpdate(false);
+        setResultMessage('');
+        setFlipActive(false);
+        setClicked(false);
+        setaudioOn(true);
+        setPlayerGameWin(false);
+        setCPUGameWin(false);
+        }
+
+   
 
     //initial fectch request
     useEffect(() => {
@@ -140,34 +203,57 @@ const GameContainer = ({ playerName }) => {
         resolveGame(result);
     }, [gameUpdate]);
 
-    if (!player.length || !cpu.length) return null;
+    useEffect(()=>{
+        checkScore()
+    },player)
+
+   
+  
+    if (!player.length || !cpu.length) {return null;}
+    else if (playerGameWin){
+        return(
+            <div className='winMessage'>
+                <div>
+                    <h1>{`${playerName} wins the game!!`}</h1>
+                    <button className="reset-game" onClick={resetGame}>Play Again</button>
+                </div>
+            </div>
+        )
+    }
+    else if (cpuGameWin){
+        return(
+            <div className='winMessage'>
+                <div>
+                    <h1>CPU wins the game!!</h1>
+                    <button className="reset-game" onClick={resetGame}>Play Again</button>
+                </div>
+            </div>
+        )
+    }
 
 
-    // // limits audio volume to 20%
-    // // works if page loaded then code applied - breaks app if refreshed
-
-    // const audio = document.getElementById("theme-audio")
-    // function setVolume(){
-    //     audio.volume = 0.2
-    //     }
-    // setVolume()
+    else{
 
     return (
         <>
-            <div className="audio-container">
-                <ReactAudioPlayer src={require("../Audio/Jurassic_Park_Theme_Song.mp3")} controls volume={0.05} controlsList="nodownload noplaybackrate" loop />
-            </div>
             <div className="cards-display">
                 <div className="player-card">
                     <div className="player-name">
                         <p>{playerName}</p>
                     </div>
-                    <PlayerCard player={player} compareAttribute={compareAttribute} handleCardFlip={handleCardFlip} />
+                    <PlayerCard player={player} compareAttribute={compareAttribute} handleCardFlip={handleCardFlip} clicked={clicked} setClicked={setClicked} />
                     <div className="cards-remaining">
                         <p>{player.length} cards remaining</p>
                     </div>
                 </div>
                 <div className="middle-panel">
+                    <div className="testAudio">
+                        {audioOn ?
+                            <button className="pause-button" onClick={togglePlay}>▐▐</button>
+                            :
+                            <button className="play-button" onClick={togglePlay}>▶</button>
+                        }
+                    </div>
                     <div className="draw-pile">
                         <p>DRAW PILE: {middle.length}</p>
                     </div>
@@ -182,8 +268,21 @@ const GameContainer = ({ playerName }) => {
                     </div>
                 </div>
             </div>
+            <ToastContainer
+                position="bottom-center"
+                autoClose={4000}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </>
     );
+}
 
 
 

@@ -26,7 +26,7 @@
 }
 
 .dino-name {
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: bold;
   margin: 0;
   margin-top: 10px;
@@ -34,10 +34,10 @@
 }
 
 .dino-info {
-  font-size: 0.75em;
+  font-size: 0.85em;
   font-style: italic;
   margin: 0;
-  height: 70px;
+  height: 90px;
   padding: 10px 20px 10px 20px;
   display: flex;
   justify-content: center;
@@ -47,102 +47,70 @@
 .dino-weight {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
-}
-
-.dino-weight:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
 }
 
 .dino-height {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
-}
-
-.dino-height:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
 }
 
 .dino-length {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
-}
-
-.dino-length:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
 }
 
 .dino-age {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
-}
-
-.dino-age:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
 }
 
 .dino-intelligence {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
-}
-
-.dino-intelligence:hover {
-  cursor: pointer;
-  color: rgb(174, 255, 0);
-  animation-name: hoverAnimation;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
-  border: 0.1em solid;
-  border-radius: 10px;
 }
 
 .dino-danger {
   transition: color 0.3s, transform 1s;
   text-align: center;
+  font-size: 1.25em;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
   border: 0.1em solid black;
 }
 
-.dino-danger:hover {
+.player-selection:hover {
   cursor: pointer;
   color: rgb(174, 255, 0);
   animation-name: hoverAnimation;
@@ -150,13 +118,33 @@
   animation-timing-function: ease;
   border: 0.1em solid;
   border-radius: 10px;
-
 }
-.playerAudio{
+
+.playersoundbutton{
   display: flex;
   justify-content: center;
+  background-color: black;
+}
 
+.playersoundbutton > button {
+  background-color: black;
+  padding: 0;
+  outline: none;
+  width: 120px;
+  border-radius: 20px;
+}
 
+.dinobutton {
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: center;
+  color: green;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.playersoundbutton > button:hover {
+  cursor: pointer;
 }
 
 
@@ -202,6 +190,7 @@
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {  
   background-color: #000000;
+  box-shadow: 10px 10px 10px #0000008d;
 }
 
 /* Style the back side */

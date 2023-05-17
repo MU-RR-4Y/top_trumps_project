@@ -1,16 +1,30 @@
-import React from "react";
+import React, {useState, useEffect, useRef} from "react";
 import "./Cards.css";
-import ReactAudioPlayer from "react-audio-player";
 
 const ComputerCard = ({ cpu, flipActive }) => {
+    const [cpuEffectOn, setcpuEffectOn] = useState(false);
     const mapArray = cpu.map((item) => { return item });
+
+    const computerAudioElement = useRef(null)
+
+    useEffect (()=>{
+        computerAudioElement.current.volume="0.4"
+        computerAudioElement ? computerAudioElement.current.play() : computerAudioElement.current.pause()
+
+    },[cpuEffectOn]);
+
+    const togglePlayDinoComputer = () => {
+        setcpuEffectOn(!cpuEffectOn)
+    };
+
+    
 
     return (
         <>
         <div className="flip-card">
                 <div className= {`flip-card-inner ${flipActive? 'is-flipped' : null }`}>
                     <div className={'flip-card-front'}>
-                           <img src={require('../Images/_Logo.jpg')} height="680" width="400" className="styled-flip"  alt="" class="center" style={{ objectFit: "contain" }}/>
+                           <img src={require('../Images/_Logo.jpg')} height="680" width="400" className="styled-flip" alt="" style={{ objectFit: "contain" }}/>
                     </div>
                         <div className="flip-card-back">
                             <div className="card-border">
@@ -22,7 +36,7 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                     <p className="dino-name">
                                         {mapArray[0].name}{mapArray[0].diet == "Herbivore" ? " 🥬" : " 🥩"}
                                     </p>
-                                    <div className="dino-info">
+                                    <div className="dino-info" align="center">
                                         <p>{mapArray[0].description}</p>
                                     </div>
                                     <div className="dino-stats">
@@ -32,14 +46,18 @@ const ComputerCard = ({ cpu, flipActive }) => {
                                         <p className="dino-age">Age:  {mapArray[0].age} million years</p>
                                         <p className="dino-intelligence">Intelligence:  {mapArray[0].intelligence}</p>
                                         <p className="dino-danger">Danger rating:  {mapArray[0].danger_rating}</p>
-                                        <ReactAudioPlayer src={require("../Audio/" + mapArray[0].sound)} controls volume={0.4} controlsList="nodownload noplaybackrate" />
+                                        <div className="playersoundbutton">
+                                            <button onClick={togglePlayDinoComputer}>
+                                                <span className="dinobutton">▶🦖</span>
+                                                <audio src={require("../Audio/" + mapArray[0].sound)} ref={computerAudioElement}></audio>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                </div>
             </div>
-      
         </>
     );
 };
